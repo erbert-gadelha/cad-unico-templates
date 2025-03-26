@@ -8,7 +8,7 @@
             "terminalStatus": false,
             "statusMode": "NORMAL",
             "mainStream": true,
-            "description": "Intercorrência não realizada",
+            "description": "Intercorrência não Reportada",
             "limitValue": 3,
             "timeLimitRule": 10,
             "unitOfTimeType": "MINUTES",
@@ -19,7 +19,7 @@
             "terminalStatus": false,
             "statusMode": "NORMAL",
             "mainStream": true,
-            "description": "Intercorrência realizada",
+            "description": "Intercorrência Reportada",
             "limitValue": 3,
             "timeLimitRule": 10,
             "unitOfTimeType": "MINUTES",
@@ -28,18 +28,18 @@
     ],
     "tasks": [
         {
-            "description": "Realizar Intercorrências",
+            "description": "Reportar Intercorrências",
             "executionOrder": 1,
             "groupName": "LIDER",
-            "currentStatus": "Intercorrência não realizada",
+            "currentStatus": "Intercorrência não Reportada",
             "whenTaskStatusIs": "COMPLETED",
             "processStatusGoesTo": [
-                "Ronda realizada"
+                "Intercorrência Reportada"
             ],
             "actions": [
                 {
                     "displayOrder": 1,
-                    "description": "Realizar Intercorrência",
+                    "description": "Reportar Intercorrência",
                     "possibleNextActions": [],
                     "setTaskStatus": "COMPLETED",
                     "isMobile": true,
@@ -97,6 +97,23 @@
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT"
+                        },
+
+
+                        {
+                            "description": "intercorrencia_periodo",
+                            "label": "Período da Intercorrência",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Manhã"
+                                },
+                                {
+                                    "value": "Tarde"
+                                }
+                            ]
                         },
 
 

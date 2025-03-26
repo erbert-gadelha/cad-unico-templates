@@ -34,7 +34,7 @@
             "currentStatus": "Análise de Colaborador não realizada",
             "whenTaskStatusIs": "COMPLETED",
             "processStatusGoesTo": [
-                "Ronda realizada"
+                "Análise realizada"
             ],
             "actions": [
                 {
