@@ -115,65 +115,235 @@
                                 }
                             ]
                         },
-
-
-
                         {
-                            "description": "transferencia_origem_da_solicitacao",
-                            "label": "Origem da solicitação da transferência ",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "TEXT"
-                        },
-                        {
-                            "description": "transferencia_periodo",
-                            "label": "Período da transferência",
+                            "description": "intercorrencia_bool",
+                            "label": "Ocorrência (s) a informar?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
                             "fieldValues": [
                                 {
-                                    "value": "Manhã"
+                                    "value": "Sim"
                                 },
                                 {
-                                    "value": "Tarde"
+                                    "value": "Não"
                                 }
-                            ]
+                            ]  
+                        },
+                        {
+                            "description": "intercorrencia_qntd",
+                            "label": "Justificativa de atraso (1)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [{
+                                    "description": "Exibir campo se a resposta for? Sim",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_bool"
+                                }
+                            ],"fieldValues": [
+                                {   "value": "1"    },
+                                {   "value": "2"    },
+                                {   "value": "3"    },
+                                {   "value": "4"    },
+                                {   "value": "5"    }
+                            ]                            
                         },
 
 
 
+
                         {
-                            "description": "colaboradortransferido_nome",
-                            "label": "Nome o colaborador transferido",
+                            "description": "intercorrencia_1_justificativa",
+                            "label": "Justificativa da Intercorrência (1)",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
-                        },
-                        {
-                            "description": "colaboradortransferido_re",
-                            "label": "RE do colaborador Transferido",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 1,2,3,4,5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
+                        }, {
+                            "description": "intercorrencia_1_foto",
+                            "label": "Registro Fotográfico da Intercorrência (1)",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "TEXT"
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 1,2,3,4,5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
                         },
+                        
+                        
+                        
                         {
-                            "description": "colaboradortransferido_cracha_foto",
-                            "label": "Foto do Crachá do colaborador a ser Transferido",
+                            "description": "intercorrencia_2_justificativa",
+                            "label": "Justificativa da Intercorrência (2)",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "PHOTO"
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 2,3,4,5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
+                        }, {
+                            "description": "intercorrencia_2_foto",
+                            "label": "Registro Fotográfico da Intercorrência (2)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 2,3,4,5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
+                        },
+
+
+                        
+                        {
+                            "description": "intercorrencia_3_justificativa",
+                            "label": "Justificativa da Intercorrência (3)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 3,4,5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
+                        }, {
+                            "description": "intercorrencia_3_foto",
+                            "label": "Registro Fotográfico da Intercorrência (3)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 3,4,5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
+                        },
+
+
+                        
+                        {
+                            "description": "intercorrencia_4_justificativa",
+                            "label": "Justificativa da Intercorrência (4)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 4,5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
+                        }, {
+                            "description": "intercorrencia_4_foto",
+                            "label": "Registro Fotográfico da Intercorrência (4)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 4,5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
+                        },
+
+
+                        
+                        {
+                            "description": "intercorrencia_5_justificativa",
+                            "label": "Justificativa da Intercorrência (5)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
+                        }, {
+                            "description": "intercorrencia_5_foto",
+                            "label": "Registro Fotográfico da Intercorrência (5)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? 5",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_qntd"
+                                }
+                            ]                       
                         },
 
 
 
+
+
+
+
                         {
-                            "description": "transferencia_local",
-                            "label": "Local da Transferência",
+                            "description": "intercorrencia_interacao_gestor",
+                            "label": "Houve interação com o gestor local da unidade sobre a ocorrência?",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "TEXT"
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Sim"
+                                },
+                                {
+                                    "value": "Não"
+                                },
+                                {
+                                    "value": "Não se Aplica"
+                                }
+                            ]
                         },
+                        {
+                            "description": "intercorrencia_justificativa_gestor",
+                            "label": "Justificativa",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir campo se a resposta for? Sim",
+                                    "fieldRuleActionType": "DISPLAY_FIELD",
+                                    "sourceFieldDescription": "intercorrencia_interacao_gestor"
+                                }
+                            ]                       
+                        },
+
+
+
+
+
 
 
                         
