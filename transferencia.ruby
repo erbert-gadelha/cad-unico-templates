@@ -34,7 +34,7 @@
             "currentStatus": "Transferência não realizada",
             "whenTaskStatusIs": "COMPLETED",
             "processStatusGoesTo": [
-                "Ronda realizada"
+                "Transferência realizada"
             ],
             "actions": [
                 {
