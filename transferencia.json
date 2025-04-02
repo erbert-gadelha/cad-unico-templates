@@ -131,7 +131,7 @@
                             "label": "Nome o colaborador transferido",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "TEXT",
+                            "fieldType": "TEXT"
                         },
                         {
                             "description": "colaboradortransferido_re",

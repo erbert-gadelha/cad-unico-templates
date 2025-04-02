@@ -674,7 +674,6 @@
                             "fieldType": "AUDIO"
                         },
                         {
-                            #
                             "mandatory": true,
                             "visible": true,
                             "description": "oberservacoes",

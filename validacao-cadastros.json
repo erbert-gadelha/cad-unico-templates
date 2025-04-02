@@ -1,0 +1,228 @@
+{
+    "name": "Validação de Cadastros",
+    "description": "Validação de Cadastros",
+    "group": "LIDER",
+    "processStatus": [
+        {
+            "important": false,
+            "terminalStatus": false,
+            "statusMode": "NORMAL",
+            "mainStream": true,
+            "description": "Validação de Cadastro Não Realizada",
+            "limitValue": 3,
+            "timeLimitRule": 10,
+            "unitOfTimeType": "MINUTES",
+            "subStatus": []
+        },
+        {
+            "important": false,
+            "terminalStatus": false,
+            "statusMode": "NORMAL",
+            "mainStream": true,
+            "description": "Validação de Cadastro Realizada",
+            "limitValue": 3,
+            "timeLimitRule": 10,
+            "unitOfTimeType": "MINUTES",
+            "subStatus": []
+        }
+    ],
+    "tasks": [
+        {
+            "description": "Realizar Pesquisa de Qualidade",
+            "executionOrder": 1,
+            "groupName": "LIDER",
+            "currentStatus": "Pesquisa Mensal Não Realizada",
+            "whenTaskStatusIs": "COMPLETED",
+            "processStatusGoesTo": [
+                "Pesquisa Mensal Realizada"
+            ],
+            "actions": [
+                {
+                    "displayOrder": 1,
+                    "description": "Pesquisa de Qualidade Mensal",
+                    "possibleNextActions": [],
+                    "setTaskStatus": "COMPLETED",
+                    "isMobile": true,
+                    "events": [],
+                    "fields": [
+                        {
+                            "description": "autor_nome",
+                            "label": "Nome do responsável por responder a pesquisa",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT"
+                        },
+                        {
+                            "description": "autor_re_matricula",
+                            "label": "R.E / Matrícula do responsável pelo preenchimento",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT"
+                        },
+
+
+                        {
+                            "description": "resposta_autor_frequencia",
+                            "label": "Como classifica a quantidade frequência dos entrevistadores no ambiente de trabalho no último mês?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Ótimo"
+                                },
+                                {
+                                    ",value": "Bom"
+                                },
+                                {
+                                    "value": "Regular"
+                                },
+                                {
+                                    "value": "Ruim"
+                                },
+                                {
+                                    "value": "Péssimo"
+                                } 
+                            ]
+                        },
+                        {
+                            "description": "resposta_autor_produtividade",
+                            "label": "Como classifica a produtividade dos colaboradores dos entrevistadores nas unidades?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Ótimo"
+                                },
+                                {
+                                    ",value": "Bom"
+                                },
+                                {
+                                    "value": "Regular"
+                                },
+                                {
+                                    "value": "Ruim"
+                                },
+                                {
+                                    "value": "Péssimo"
+                                } 
+                            ]
+                        },
+                        {
+                            "description": "resposta_frequencia_tecincosinformatica",
+                            "label": "Como classifica a quantidade frequência dos técnicos de informática no ambiente de trabalho no último mês?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Ótimo"
+                                },
+                                {
+                                    ",value": "Bom"
+                                },
+                                {
+                                    "value": "Regular"
+                                },
+                                {
+                                    "value": "Ruim"
+                                },
+                                {
+                                    "value": "Péssimo"
+                                } 
+                            ]
+                        },
+                        {
+                            "description": "resposta_produtividade_tecnicosinformatica",
+                            "label": "Como classifica a quantidade frequência dos técnicos de informática no ambiente de trabalho no último mês?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Ótimo"
+                                },
+                                {
+                                    ",value": "Bom"
+                                },
+                                {
+                                    "value": "Regular"
+                                },
+                                {
+                                    "value": "Ruim"
+                                },
+                                {
+                                    "value": "Péssimo"
+                                } 
+                            ]
+                        },
+                        {
+                            "description": "resposta_conhecimento_tecnicosinformatica",
+                            "label": "Como classifica o nível de conhecimento técnico dos colaboradores de informática nas atividades executadas por eles?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Ótimo"
+                                },
+                                {
+                                    ",value": "Bom"
+                                },
+                                {
+                                    "value": "Regular"
+                                },
+                                {
+                                    "value": "Ruim"
+                                },
+                                {
+                                    "value": "Péssimo"
+                                } 
+                            ]
+                        },
+
+
+                        
+
+
+                        {
+                            "description": "resposta_quantas_visitas_mes",
+                            "label": "Quantas visitas foram executadas por mês na Smards?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Acima de 10"
+                                },
+                                {
+                                    ",value": "Abaixo de 10"
+                                },
+                                {
+                                    "value": "01 por Semana"
+                                },
+                                {
+                                    "value": "Não executou visitas"
+                                }
+                            ]
+                        },
+
+
+
+
+
+                        {
+                            "description": "observacoes",
+                            "label": "Observações?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT"
+                        }
+
+                    ]
+                }
+            ]
+        }
+    ]
+}

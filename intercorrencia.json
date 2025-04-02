@@ -328,7 +328,7 @@
                         {
                             "description": "intercorrencia_justificativa_gestor",
                             "label": "Justificativa",
-                            "mandatory": false,
+                            "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
                             "fieldRules": [
