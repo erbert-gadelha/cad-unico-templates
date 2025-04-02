@@ -1,6 +1,6 @@
 {
-    "name": "Validação de Cadastros",
-    "description": "Validação de Cadastros",
+    "name": "Validação de Cadastro",
+    "description": "Validação de Cadastro",
     "group": "LIDER",
     "processStatus": [
         {
@@ -28,18 +28,18 @@
     ],
     "tasks": [
         {
-            "description": "Realizar Pesquisa de Qualidade",
+            "description": "Validação de Cadastro",
             "executionOrder": 1,
             "groupName": "LIDER",
-            "currentStatus": "Pesquisa Mensal Não Realizada",
+            "currentStatus": "Validação de Cadastro Não Realizada",
             "whenTaskStatusIs": "COMPLETED",
             "processStatusGoesTo": [
-                "Pesquisa Mensal Realizada"
+                "Validação de Cadastro Realizada"
             ],
             "actions": [
                 {
                     "displayOrder": 1,
-                    "description": "Pesquisa de Qualidade Mensal",
+                    "description": "Validação de Cadastro",
                     "possibleNextActions": [],
                     "setTaskStatus": "COMPLETED",
                     "isMobile": true,
@@ -47,14 +47,14 @@
                     "fields": [
                         {
                             "description": "autor_nome",
-                            "label": "Nome do responsável por responder a pesquisa",
+                            "label": "Nome do responsável pela validação",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT"
                         },
                         {
                             "description": "autor_re_matricula",
-                            "label": "R.E / Matrícula do responsável pelo preenchimento",
+                            "label": "R.E / Matrícula do responsável pela validação",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT"
@@ -62,155 +62,172 @@
 
 
                         {
-                            "description": "resposta_autor_frequencia",
-                            "label": "Como classifica a quantidade frequência dos entrevistadores no ambiente de trabalho no último mês?",
+                            "description": "resposta_posto_de_trabalho",
+                            "label": "Posto de Trabalho",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
                             "fieldValues": [
-                                {
-                                    "value": "Ótimo"
-                                },
-                                {
-                                    ",value": "Bom"
-                                },
-                                {
-                                    "value": "Regular"
-                                },
-                                {
-                                    "value": "Ruim"
-                                },
-                                {
-                                    "value": "Péssimo"
-                                } 
+                                {"value": "Anhanguera"},
+                                {"value": "Aricanduva"},
+                                {"value": "Arthur Alvim"},
+                                {"value": "Bela Vista"},
+                                {"value": "Brasilândia I"},
+                                {"value": "Brasilândia II"},
+                                {"value": "Brasilândia III"},
+                                {"value": "Butantã - CRAS"},
+                                {"value": "Butantã - Descomplica"},
+                                {"value": "Cachoeirinha"},
+                                {"value": "Campo Limpo - CRAS"},
+                                {"value": "Campo Limpo - Descomplica"},
+                                {"value": "Capão Redondo"},
+                                {"value": "Capela do Socorro - CRAS"},
+                                {"value": "Capela do Socorro - Descomplica"},
+                                {"value": "Casa Verde"},
+                                {"value": "Centro Oeste"},
+                                {"value": "CIC Grajau"},
+                                {"value": "Cidade Ademar - Descomplica"},
+                                {"value": "Cidade Ademar I - CRAS"},
+                                {"value": "Cidade Ademar II - CRAS"},
+                                {"value": "Cidade Lider"},
+                                {"value": "Cidade Tiradentes"},
+                                {"value": "Cidade Tiradentes"},
+                                {"value": "Ermelino Matarazzo - CRAS"},
+                                {"value": "Ermelino Matarazzo - Descomplica"},
+                                {"value": "Freguesia do Ó - CRAS"},
+                                {"value": "Freguesia do Ó - Descomplica"},
+                                {"value": "Grajau"},
+                                {"value": "Guaianases - CRAS"},
+                                {"value": "Guaianases - Descomplica"},
+                                {"value": "Iguatemi"},
+                                {"value": "Ipiranga - CRAS"},
+                                {"value": "Ipiranga - Descomplica"},
+                                {"value": "Itaim Paulista - Descomplica"},
+                                {"value": "Itaim Paulista I - CRAS"},
+                                {"value": "Itaim Paulista II - CRAS"},
+                                {"value": "Itaquera - CRAS"},
+                                {"value": "Itaquera - Descomplica"},
+                                {"value": "Jabaquara - CRAS"},
+                                {"value": "Jabaquara - Descomplica"},
+                                {"value": "Jaçanã - CRAS"},
+                                {"value": "Jaçanã - Descomplica"},
+                                {"value": "Jaraguá"},
+                                {"value": "Jd. Angela"},
+                                {"value": "Jd. São Luiz"},
+                                {"value": "Lajeado"},
+                                {"value": "Lapa - CRAS"},
+                                {"value": "Lapa - Descomplica"},
+                                {"value": "M' Boi Mirim - CRAS"},
+                                {"value": "M' Boi Mirim - Descomplica"},
+                                {"value": "Marsilac"},
+                                {"value": "Mooca - CRAS"},
+                                {"value": "Mooca - Centro Pop"},
+                                {"value": "Mooca - Descomplica"},
+                                {"value": "Norte - Móvel"},
+                                {"value": "Parelheiros - CRAS"},
+                                {"value": "Parelheiros - Descomplica"},
+                                {"value": "Pedreira"},
+                                {"value": "Penha - CRAS"},
+                                {"value": "Penha - Descomplica"},
+                                {"value": "Perus - CRAS"},
+                                {"value": "Perus - Descomplica"},
+                                {"value": "Pinheiros"},
+                                {"value": "Pirituba"},
+                                {"value": "Santana - Centro Pop"},
+                                {"value": "Santana - CRAS"},
+                                {"value": "Santana - Descomplica"},
+                                {"value": "Santo Amaro - Centro Pop"},
+                                {"value": "Santo Amaro - CRAS"},
+                                {"value": "Santo Amaro - Descomplica"},
+                                {"value": "São Mateus - CRAS"},
+                                {"value": "São Mateus - Descomplica"},
+                                {"value": "São Miguel Paulista - CRAS"},
+                                {"value": "São Miguel Paulista - Descomplica"},
+                                {"value": "Sapopemba"},
+                                {"value": "Sé - CRAS"},
+                                {"value": "Sé 24Horas - Descomplica"},
+                                {"value": "SMADS/GSUAS/CGB"},
+                                {"value": "Sta Cecilia"},
+                                {"value": "Sul - Móvel"},
+                                {"value": "Tremembé"},
+                                {"value": "Vila Andrade"},
+                                {"value": "Vila Curuçá"},
+                                {"value": "Vila Maria - Centro Pop"},
+                                {"value": "Vila Maria - CRAS"},
+                                {"value": "Vila Maria - Descomplica"},
+                                {"value": "Vila Mariana"},
+                                {"value": "Vila Medeiros"},
+                                {"value": "Vila Prudente - CRAS"},
+                                {"value": "Vila Prudente - Descomplica"}
                             ]
                         },
                         {
-                            "description": "resposta_autor_produtividade",
-                            "label": "Como classifica a produtividade dos colaboradores dos entrevistadores nas unidades?",
+                            "description": "resposta_numero_estacao",
+                            "label": "Nº da estação onde ocorreu a entrevista",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
                             "fieldValues": [
-                                {
-                                    "value": "Ótimo"
-                                },
-                                {
-                                    ",value": "Bom"
-                                },
-                                {
-                                    "value": "Regular"
-                                },
-                                {
-                                    "value": "Ruim"
-                                },
-                                {
-                                    "value": "Péssimo"
-                                } 
+                                {   "value": "1"    },
+                                {   "value": "2"    },
+                                {   "value": "3"    },
+                                {   "value": "4"    },
+                                {   "value": "5"    },
+                                {   "value": "6"    },
+                                {   "value": "7"    },
+                                {   "value": "8"    },
+                                {   "value": "9"    },
+                                {   "value": "10"   },
+                                {   "value": "11"   },
+                                {   "value": "12"   },
+                                {   "value": "13"   }
                             ]
                         },
                         {
-                            "description": "resposta_frequencia_tecincosinformatica",
-                            "label": "Como classifica a quantidade frequência dos técnicos de informática no ambiente de trabalho no último mês?",
+                            "description": "resposta_cadastro_tipo",
+                            "label": "Tipo do cadastro realizado",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
                             "fieldValues": [
-                                {
-                                    "value": "Ótimo"
-                                },
-                                {
-                                    ",value": "Bom"
-                                },
-                                {
-                                    "value": "Regular"
-                                },
-                                {
-                                    "value": "Ruim"
-                                },
-                                {
-                                    "value": "Péssimo"
-                                } 
+                                {"value": "Minha casa minha vida"},
+                                {"value": "Tarifa social da enel"},
+                                {"value": "Tarifa social da sabesp"},
+                                {"value": "Cisterna"},
+                                {"value": "Idjovem"},
+                                {"value": "Bolsa Família"},
+                                {"value": "Leve Leite"},
+                                {"value": "Para Curso"},
+                                {"value": "Intenção de Concurso"},
+                                {"value": "Passe Livre"}
                             ]
                         },
                         {
-                            "description": "resposta_produtividade_tecnicosinformatica",
-                            "label": "Como classifica a quantidade frequência dos técnicos de informática no ambiente de trabalho no último mês?",
+                            "description": "resposta_atividade_classificacao",
+                            "label": "Classificação da atividade",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
                             "fieldValues": [
-                                {
-                                    "value": "Ótimo"
-                                },
-                                {
-                                    ",value": "Bom"
-                                },
-                                {
-                                    "value": "Regular"
-                                },
-                                {
-                                    "value": "Ruim"
-                                },
-                                {
-                                    "value": "Péssimo"
-                                } 
+                                {   "value": "Novo Cadastro"    },
+                                {   "value": "Atualização do cadastro"  },
+                                {   "value": "Atendimento"      }
                             ]
                         },
                         {
-                            "description": "resposta_conhecimento_tecnicosinformatica",
-                            "label": "Como classifica o nível de conhecimento técnico dos colaboradores de informática nas atividades executadas por eles?",
+                            "description": "entrevistado_nome",
+                            "label": "Nome do entrevistado",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "LIST",
-                            "fieldValues": [
-                                {
-                                    "value": "Ótimo"
-                                },
-                                {
-                                    ",value": "Bom"
-                                },
-                                {
-                                    "value": "Regular"
-                                },
-                                {
-                                    "value": "Ruim"
-                                },
-                                {
-                                    "value": "Péssimo"
-                                } 
-                            ]
+                            "fieldType": "TEXT"
                         },
-
-
-                        
-
-
                         {
-                            "description": "resposta_quantas_visitas_mes",
-                            "label": "Quantas visitas foram executadas por mês na Smards?",
+                            "description": "reposta_horario_da_entrevista",
+                            "label": "Horário da Entrevista",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "LIST",
-                            "fieldValues": [
-                                {
-                                    "value": "Acima de 10"
-                                },
-                                {
-                                    ",value": "Abaixo de 10"
-                                },
-                                {
-                                    "value": "01 por Semana"
-                                },
-                                {
-                                    "value": "Não executou visitas"
-                                }
-                            ]
+                            "fieldType": "TEXT"
                         },
-
-
-
-
 
                         {
                             "description": "observacoes",
