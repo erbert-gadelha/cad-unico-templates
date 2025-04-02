@@ -226,7 +226,7 @@
                             "label": "Horário da Entrevista",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "TEXT"
+                            "fieldType": "DATETIME"
                         },
 
                         {
