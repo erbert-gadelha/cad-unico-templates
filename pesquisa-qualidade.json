@@ -42,20 +42,20 @@
                     "description": "Pesquisa de Qualidade Mensal",
                     "possibleNextActions": [],
                     "setTaskStatus": "COMPLETED",
-                    "isMobile": true,
+                    "isMobile": false,
                     "events": [],
                     "fields": [
                         {
                             "description": "autor_nome",
                             "label": "Nome do responsável por responder a pesquisa",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
                             "fieldType": "TEXT"
                         },
                         {
                             "description": "autor_re_matricula",
                             "label": "R.E / Matrícula do responsável pelo preenchimento",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
                             "fieldType": "TEXT"
                         },
@@ -87,7 +87,7 @@
                         },
                         {
                             "description": "resposta_autor_produtividade",
-                            "label": "Como classifica a produtividade dos colaboradores dos entrevistadores nas unidades?",
+                            "label": "Como classifica a produtividade dos colaboradores de informática que trabalham de maneira presencial na Smards?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
@@ -110,8 +110,8 @@
                             ]
                         },
                         {
-                            "description": "resposta_frequencia_tecincosinformatica",
-                            "label": "Como classifica a quantidade frequência dos técnicos de informática no ambiente de trabalho no último mês?",
+                            "description": "resposta_nivel_conhecimento_tecnicos",
+                            "label": "Como classifica o nivél de conhecimento técnico dos colaboradores de informática nas atividades executadas por eles?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
@@ -134,60 +134,7 @@
                             ]
                         },
                         {
-                            "description": "resposta_produtividade_tecnicosinformatica",
-                            "label": "Como classifica a quantidade frequência dos técnicos de informática no ambiente de trabalho no último mês?",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "LIST",
-                            "fieldValues": [
-                                {
-                                    "value": "Ótimo"
-                                },
-                                {
-                                    "value": "Bom"
-                                },
-                                {
-                                    "value": "Regular"
-                                },
-                                {
-                                    "value": "Ruim"
-                                },
-                                {
-                                    "value": "Péssimo"
-                                } 
-                            ]
-                        },
-                        {
-                            "description": "resposta_conhecimento_tecnicosinformatica",
-                            "label": "Como classifica o nível de conhecimento técnico dos colaboradores de informática nas atividades executadas por eles?",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "LIST",
-                            "fieldValues": [
-                                {
-                                    "value": "Ótimo"
-                                },
-                                {
-                                    "value": "Bom"
-                                },
-                                {
-                                    "value": "Regular"
-                                },
-                                {
-                                    "value": "Ruim"
-                                },
-                                {
-                                    "value": "Péssimo"
-                                } 
-                            ]
-                        },
-
-
-                        
-
-
-                        {
-                            "description": "resposta_quantas_visitas_mes",
+                            "description": "resposta_quantidade_visita",
                             "label": "Quantas visitas foram executadas por mês na Smards?",
                             "mandatory": true,
                             "visible": true,
@@ -200,18 +147,13 @@
                                     "value": "Abaixo de 10"
                                 },
                                 {
-                                    "value": "01 por Semana"
+                                    "value": "01 por semana"
                                 },
                                 {
                                     "value": "Não executou visitas"
                                 }
                             ]
                         },
-
-
-
-
-
                         {
                             "description": "observacoes",
                             "label": "Observações?",
