@@ -1,6 +1,6 @@
 {
-    "name": "Pesquisa de Qualidade Mensal",
-    "description": "Pesquisa de Qualidade Mensal",
+    "name": "Pesquisa de Qualidade",
+    "description": "Pesquisa de Qualidade",
     "group": "LIDER",
     "processStatus": [
         {
@@ -8,7 +8,7 @@
             "terminalStatus": false,
             "statusMode": "NORMAL",
             "mainStream": true,
-            "description": "Pesquisa Mensal Não Realizada",
+            "description": "Pesquisa Não Realizada",
             "limitValue": 3,
             "timeLimitRule": 10,
             "unitOfTimeType": "MINUTES",
@@ -19,7 +19,7 @@
             "terminalStatus": false,
             "statusMode": "NORMAL",
             "mainStream": true,
-            "description": "Pesquisa Mensal Realizada",
+            "description": "Pesquisa Realizada",
             "limitValue": 3,
             "timeLimitRule": 10,
             "unitOfTimeType": "MINUTES",
@@ -31,15 +31,15 @@
             "description": "Realizar Pesquisa de Qualidade",
             "executionOrder": 1,
             "groupName": "LIDER",
-            "currentStatus": "Pesquisa Mensal Não Realizada",
+            "currentStatus": "Pesquisa Não Realizada",
             "whenTaskStatusIs": "COMPLETED",
             "processStatusGoesTo": [
-                "Pesquisa Mensal Realizada"
+                "Pesquisa Realizada"
             ],
             "actions": [
                 {
                     "displayOrder": 1,
-                    "description": "Pesquisa de Qualidade Mensal",
+                    "description": "Pesquisa de Qualidade",
                     "possibleNextActions": [],
                     "setTaskStatus": "COMPLETED",
                     "isMobile": false,
@@ -161,7 +161,6 @@
                             "visible": true,
                             "fieldType": "TEXT"
                         }
-
                     ]
                 }
             ]
