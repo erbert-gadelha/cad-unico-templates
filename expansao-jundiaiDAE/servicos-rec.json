@@ -1,0 +1,51 @@
+{
+    "name": "Serviços REC",
+    "description": "Serviços REC",
+    "group": "DAE - SEDE",
+    "processStatus": [
+        {
+            "important": false,
+            "terminalStatus": false,
+            "statusMode": "NORMAL",
+            "mainStream": true,
+            "description": "Serviços registrados",
+            "limitValue": 3,
+            "timeLimitRule": 10,
+            "unitOfTimeType": "MINUTES",
+            "subStatus": []
+        },
+        {
+            "important": false,
+            "terminalStatus": false,
+            "statusMode": "NORMAL",
+            "mainStream": true,
+            "description": "Serviços não registrados",
+            "limitValue": 3,
+            "timeLimitRule": 10,
+            "unitOfTimeType": "MINUTES",
+            "subStatus": []
+        }
+    ],
+    "tasks": [
+        {
+            "description": "Serviços REC",
+            "executionOrder": 1,
+            "group": "DAE - SEDE",
+            "currentStatus": "Serviços não registrados",
+            "whenTaskStatusIs": "COMPLETED",
+            "processStatusGoesTo": [
+                "Serviços registrados"
+            ],
+            "actions": [
+                {
+                    "displayOrder": 1,
+                    "description": "Serviços REC",
+                    "setTaskStatus": "COMPLETED"
+                }
+            ]
+
+
+
+        }
+    ]
+}
