@@ -181,8 +181,22 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_poco_foto_justificativa_outros",
+                            "description": "servicos_rec_limpeza_poco_foto_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza de poço",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_poco",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_poco_foto_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
@@ -250,11 +264,25 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_caixa_areia_justificativa_outros",
+                            "description": "servicos_rec_limpeza_caixa_areia_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza da caixa de areia",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_caixa_areia_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_caixa_areia_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
@@ -319,11 +347,25 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_grades_justificativa_outros",
+                            "description": "servicos_rec_limpeza_grades_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza da caixa de areia",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_grades_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "FOTO",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
@@ -389,11 +431,25 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_justificativa_outros",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza do poço de sucção",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
@@ -463,7 +519,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_tanque_desinfeccao_justificativa_outros",
+                            "description": "servicos_rec_tanque_desinfeccao_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza do tanque de desinfecção",
                             "mandatory": true,
                             "visible": true,
@@ -475,7 +531,30 @@
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_desinfeccao_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_tanque_desinfeccao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
                         }
+
+
+
+                        
+
+
+
+
+                        
 
 
 
