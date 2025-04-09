@@ -45,7 +45,111 @@
                     "isMobile": true,
                     "events": [],
                     "fields":[
-                        
+                        {
+                            "description": "qr_code_local",
+                            "label": "Leitura do QR Code Local",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "QR_CODE"
+                        },
+                        {
+                            "description": "local",
+                            "label": "Local",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "-recebe texto do QRCode lido-",
+                                    "sourceFieldDescription": "qr_code_local",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "quebra_tela_1",
+                            "label": "quebra_tela",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "SCREEN_BREAKING"
+                        },
+                        {
+                            "description": "geo",
+                            "label": "Geo",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "GEOLOCATION"
+                        },
+                        {
+                            "description": "opcoes_checklist",
+                            "label": "Escolha um checklist",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Serviços REC"
+                                },
+                                {
+                                    "value": "Inspeções REC"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "quebra_tela_2",
+                            "label": "quebra_tela",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "SCREEN_BREAKING"
+                        },
+                        {
+                            "description": "servicos_rec_utilizando_epi",
+                            "label": "Está usando os EPI's necessários para a execução da atividade?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_caminhao_limpa_fossa",
+                            "label": "Foi utilizado o caminhão limpa fossa?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_poco",
+                            "label": "Foi efetuado a limpeza de poço da elevatória?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
+
                     ]
                 }
             ]
