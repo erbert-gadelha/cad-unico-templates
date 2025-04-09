@@ -263,21 +263,15 @@
                                 }
                             ]
                         },
-                        
-
-
-
-
-
 
 
 
 
 
                         {
-                            "description": "servicos_rec_limpeza_poco",
-                            "label": "Foi efetuado a limpeza de poço da elevatória?",
-                            "mandatory": false,
+                            "description": "servicos_rec_limpeza_grades",
+                            "label": "Houve limpeza das grades?",
+                            "mandatory": true,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
@@ -287,11 +281,67 @@
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
-                        }
-                        ,{
-                            "description": "servicos_rec_limpeza_poco",
-                            "label": "Foi efetuado a limpeza de poço da elevatória?",
-                            "mandatory": false,
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_grades_photo",
+                            "label": "Foto comprovando a limpeza das grades",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_grades_justificativa",
+                            "label": "Por que não houve limpeza das grades?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_grades_justificativa_outros",
+                            "label": "Justifique porque não houve limpeza da caixa de areia",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+
+
+
+                        
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poço_succao",
+                            "label": "Houve limpeza do poço de sucção?",
+                            "mandatory": true,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
@@ -301,49 +351,67 @@
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
-                        }
-                        ,{
-                            "description": "servicos_rec_limpeza_poco",
-                            "label": "Foi efetuado a limpeza de poço da elevatória?",
-                            "mandatory": false,
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poço_succao_photo",
+                            "label": "Foto comprovando a limpeza do poço de sucção",
+                            "mandatory": true,
                             "visible": true,
-                            "fieldType": "BOOLEAN",
+                            "fieldType": "PHOTO",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poço_succao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poço_succao_justificativa",
+                            "label": "Por que não houve limpeza do poço de sucção?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poço_succao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poço_succao_justificativa_outros",
+                            "label": "Justifique porque não houve limpeza do poço de sucção",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poço_succao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         }
-                        ,{
-                            "description": "servicos_rec_limpeza_poco",
-                            "label": "Foi efetuado a limpeza de poço da elevatória?",
-                            "mandatory": false,
-                            "visible": true,
-                            "fieldType": "BOOLEAN",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        }
-                        ,{
-                            "description": "servicos_rec_limpeza_poco",
-                            "label": "Foi efetuado a limpeza de poço da elevatória?",
-                            "mandatory": false,
-                            "visible": true,
-                            "fieldType": "BOOLEAN",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        }
+
+
+
+
+
+
+
+
+
+                       
 
                     ]
                 }
