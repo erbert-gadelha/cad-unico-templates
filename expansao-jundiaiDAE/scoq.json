@@ -1378,6 +1378,64 @@
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
+                        },
+
+
+
+
+                        {
+                            "description": "servicos_rec_assinatura",
+                            "label": "Assinatura do colaborador",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "SIGNATURE",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "servicos_rec_re",
+                            "label": "R.E do colaborador",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "servicos_rec_status",
+                            "label": "Status da tarefa",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Em andamento"
+                                },
+                                {
+                                    "value": "Finalizado"
+                                }
+                            ]
                         }
                         
 
