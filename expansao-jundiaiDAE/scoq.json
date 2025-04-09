@@ -1793,7 +1793,90 @@
                                     "value": "Ambas os aeradores"
                                 }
                             ]
-                        }
+                        },
+
+
+
+                        {TUBULACAO COM RECALQUE},
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque",
+                            "label": "Existe algum problema na tubulação do recalque?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                            
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque_valvula",
+                            "label": "Existe problema na válvula?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_problema_tubulacao_recalque",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque_valvula_local",
+                            "label": "Qual o local do problema da válvula?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_problema_tubulacao_recalque_valvula",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque_registro",
+                            "label": "Existe problema no registro?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_problema_tubulacao_recalque",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque_registro_local",
+                            "label": "Qual o local do problema do registro?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_problema_tubulacao_recalque_registro",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        
                         
                         
 
