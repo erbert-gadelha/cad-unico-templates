@@ -339,7 +339,7 @@
 
                         
                         {
-                            "description": "servicos_rec_limpeza_cesta_poço_succao",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao",
                             "label": "Houve limpeza do poço de sucção?",
                             "mandatory": true,
                             "visible": true,
@@ -353,7 +353,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poço_succao_photo",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_photo",
                             "label": "Foto comprovando a limpeza do poço de sucção",
                             "mandatory": true,
                             "visible": true,
@@ -361,13 +361,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poço_succao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poço_succao_justificativa",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_justificativa",
                             "label": "Por que não houve limpeza do poço de sucção?",
                             "mandatory": true,
                             "visible": true,
@@ -375,7 +375,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poço_succao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -389,7 +389,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poço_succao_justificativa_outros",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_justificativa_outros",
                             "label": "Justifique porque não houve limpeza do poço de sucção",
                             "mandatory": true,
                             "visible": true,
@@ -397,7 +397,81 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poço_succao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
+
+
+
+
+
+
+
+
+
+
+                        ,{
+                            "description": "servicos_rec_tanque_desinfeccao",
+                            "label": "Houve limpeza do tanque de desinfecção?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_desinfeccao_photo",
+                            "label": "Foto comprovando a limpeza do tanque de desinfecção",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_tanque_desinfeccao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_desinfeccao_justificativa",
+                            "label": "Por que não houve limpeza do tanque de desinfecção?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_tanque_desinfeccao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_desinfeccao_justificativa_outros",
+                            "label": "Justifique porque não houve limpeza do tanque de desinfecção",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_tanque_desinfeccao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
