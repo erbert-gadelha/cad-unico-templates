@@ -1876,34 +1876,112 @@
                             ]
                         },
 
-                        
-                        
-                        
+
+                        {CONDICAO DO EFLUENTE},
 
 
-                        
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_normal",
+                            "label": "A condição do efluente está normal?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_normal_sim",
+                            "label": "Comprove que o efluente está normal com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_condicao_efluente_normal",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_normal_nao",
+                            "label": "Comprove que o efluente está fora do normal com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_condicao_efluente_normal",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
 
 
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_coloracao",
+                            "label": "Coloração do efluente",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
 
+                            "fieldValues": [
+                                {
+                                    "value": "Cinza"
+                                },
+                                {
+                                    "value": "???"
+                                }
+                            ]
+                        },
 
-                        
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_coloracao_cinza",
+                            "label": "Comprove que o efluente está com a cor cinza",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Cinza",
+                                    "sourceFieldDescription": "inspecoes_rec_condicao_efluente_coloracao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
 
-
-
-
-
-
-
-
-
-                       
-
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_coloracao_outro",
+                            "label": "Capture uma foto mostrando qual a coloração do efluente",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_condicao_efluente_coloracao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
                     ]
                 }
             ]
-
-
-
         }
     ]
 }
