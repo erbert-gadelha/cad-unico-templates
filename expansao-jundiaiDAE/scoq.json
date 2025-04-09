@@ -1619,8 +1619,181 @@
                                     "value": "Ambas as Bombas"
                                 }
                             ]
-                        }
+                        },
 
+
+
+                        {AMPERAGEM DOS AERADORES},
+
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_01",
+                            "label": "Qual a amperagem do Aerador 01? (>/= 25A)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_02",
+                            "label": "Qual a amperagem do Aerador 02? (>/= 25A)",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {RUIDO E VIBRACAO DOS AERADORES},
+
+                        {
+                            "description": "inspecoes_rec_ruido_aerador",
+                            "label": "Algum aerador apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_ruido_aerador_quais_aeradores_sim",
+                            "label": "Qual aerador apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_ruido_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Aerador 01"
+                                },
+                                {
+                                    "value": "Aerador 02"
+                                },
+                                {
+                                    "value": "Ambas os aeradores"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_ruido_aerador_quais_aeradores_nao",
+                            "label": "Qual aerador não apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_ruido_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Aerador 01"
+                                },
+                                {
+                                    "value": "Aerador 02"
+                                },
+                                {
+                                    "value": "Ambas os aeradores"
+                                }
+                            ]
+                        },
+
+                        {VIBRACAO},
+
+                        {
+                            "description": "inspecoes_rec_vibracao_aerador",
+                            "label": "Algum aerador apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_ruido_vibracao_quais_aeradores_sim",
+                            "label": "Qual aerador apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_vibracao_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Aerador 01"
+                                },
+                                {
+                                    "value": "Aerador 02"
+                                },
+                                {
+                                    "value": "Ambas os aeradores"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_ruido_aerador_quais_aeradores_nao",
+                            "label": "Qual aerador não apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_vibracao_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Aerador 01"
+                                },
+                                {
+                                    "value": "Aerador 02"
+                                },
+                                {
+                                    "value": "Ambas os aeradores"
+                                }
+                            ]
+                        }
                         
                         
 
