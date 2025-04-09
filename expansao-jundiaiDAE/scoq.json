@@ -1436,7 +1436,195 @@
                                     "value": "Finalizado"
                                 }
                             ]
+                        },
+
+
+                        {INSPECOES REC},
+
+                        {
+                            "description": "inspecoes_rec_utilizando_epi",
+                            "label": "Está usando os EPI's necessários para a execução da atividade?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba_01",
+                            "label": "Qual a amperagem da Bomba 01? (>/= 15A)",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba_02",
+                            "label": "Qual a amperagem da Bomba 02? (>/= 15A)",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_ruido_bomba",
+                            "label": "Alguma bomba apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_ruido_bomba_quais_bombas_sim",
+                            "label": "Qual bomba apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_ruido_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Bomba 01"
+                                },
+                                {
+                                    "value": "Bomba 02"
+                                },
+                                {
+                                    "value": "Ambas as Bombas"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_ruido_bomba_quais_bombas_nao",
+                            "label": "Qual bomba não apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_ruido_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Bomba 01"
+                                },
+                                {
+                                    "value": "Bomba 02"
+                                },
+                                {
+                                    "value": "Ambas as Bombas"
+                                }
+                            ]
+                        },
+
+                        {VIBRACAO},
+
+                        {
+                            "description": "inspecoes_rec_vibracao_bomba",
+                            "label": "Alguma bomba apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_ruido_vibracao_quais_bombas_sim",
+                            "label": "Qual bomba apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_vibracao_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Bomba 01"
+                                },
+                                {
+                                    "value": "Bomba 02"
+                                },
+                                {
+                                    "value": "Ambas as Bombas"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_ruido_bomba_quais_bombas_nao",
+                            "label": "Qual bomba não apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_vibracao_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Bomba 01"
+                                },
+                                {
+                                    "value": "Bomba 02"
+                                },
+                                {
+                                    "value": "Ambas as Bombas"
+                                }
+                            ]
                         }
+
+                        
+                        
+
+
                         
 
 
