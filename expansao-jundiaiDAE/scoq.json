@@ -1439,8 +1439,6 @@
                         },
 
 
-                        {INSPECOES REC},
-
                         {
                             "description": "inspecoes_rec_utilizando_epi",
                             "label": "Está usando os EPI's necessários para a execução da atividade?",
@@ -1551,8 +1549,6 @@
                             ]
                         },
 
-                        {VIBRACAO},
-
                         {
                             "description": "inspecoes_rec_vibracao_bomba",
                             "label": "Alguma bomba apresenta vibração?",
@@ -1623,8 +1619,6 @@
 
 
 
-                        {AMPERAGEM DOS AERADORES},
-
                         {
                             "description": "inspecoes_rec_amperagem_aerador_01",
                             "label": "Qual a amperagem do Aerador 01? (>/= 25A)",
@@ -1655,7 +1649,6 @@
                         },
 
 
-                        {RUIDO E VIBRACAO DOS AERADORES},
 
                         {
                             "description": "inspecoes_rec_ruido_aerador",
@@ -1725,7 +1718,6 @@
                             ]
                         },
 
-                        {VIBRACAO},
 
                         {
                             "description": "inspecoes_rec_vibracao_aerador",
@@ -1797,7 +1789,6 @@
 
 
 
-                        {TUBULACAO COM RECALQUE},
 
                         {
                             "description": "inspecoes_rec_problema_tubulacao_recalque",
@@ -1876,8 +1867,6 @@
                             ]
                         },
 
-
-                        {CONDICAO DO EFLUENTE},
 
 
                         {
@@ -1976,6 +1965,75 @@
                                     "description": "Exibir se a resposta for? Não",
                                     "sourceFieldDescription": "inspecoes_rec_condicao_efluente_coloracao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_observacoes",
+                            "label": "Observações",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_assinatura",
+                            "label": "Assinatura do responsável",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "SIGNATURE",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_re",
+                            "label": "R.E do responsável",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_status",
+                            "label": "Status",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Em andamento"
+                                },
+                                {
+                                    "value": "Finalizado"
                                 }
                             ]
                         }
