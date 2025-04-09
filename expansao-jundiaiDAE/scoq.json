@@ -1,14 +1,14 @@
 {
-    "name": "Serviços REC",
-    "description": "Serviços REC",
-    "group": "DAE - SEDE",
+    "name": "S.C.O.Q - DAE/Jundiaí",
+    "description": "Sistema de Controle de Operações e Qualidade - DAE/Jundiaí",
+    "group": "REC",
     "processStatus": [
         {
             "important": false,
             "terminalStatus": false,
             "statusMode": "NORMAL",
             "mainStream": true,
-            "description": "Serviços registrados",
+            "description": "Tarefa finalizada",
             "limitValue": 3,
             "timeLimitRule": 10,
             "unitOfTimeType": "MINUTES",
@@ -19,7 +19,7 @@
             "terminalStatus": false,
             "statusMode": "NORMAL",
             "mainStream": true,
-            "description": "Serviços não registrados",
+            "description": "Tarefa não finalizada",
             "limitValue": 3,
             "timeLimitRule": 10,
             "unitOfTimeType": "MINUTES",
@@ -28,19 +28,25 @@
     ],
     "tasks": [
         {
-            "description": "Serviços REC",
+            "description": "S.C.O.Q",
             "executionOrder": 1,
-            "group": "DAE - SEDE",
-            "currentStatus": "Serviços não registrados",
+            "group": "REC",
+            "currentStatus": "Tarefa não finalizada",
             "whenTaskStatusIs": "COMPLETED",
             "processStatusGoesTo": [
-                "Serviços registrados"
+                "Tarefa finalizada"
             ],
             "actions": [
                 {
                     "displayOrder": 1,
-                    "description": "Serviços REC",
-                    "setTaskStatus": "COMPLETED"
+                    "description": "S.C.O.Q",
+                    "possibleNextActions": [],
+                    "setTaskStatus": "COMPLETED",
+                    "isMobile": true,
+                    "events": [],
+                    "fields":[
+                        
+                    ]
                 }
             ]
 
