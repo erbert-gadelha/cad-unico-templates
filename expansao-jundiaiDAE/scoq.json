@@ -381,7 +381,7 @@
 
                         
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim",
                             "label": "Houve limpeza do poço de sucção?",
                             "mandatory": true,
                             "visible": true,
@@ -395,7 +395,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_photo",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_photo",
                             "label": "Foto comprovando a limpeza do poço de sucção",
                             "mandatory": true,
                             "visible": true,
@@ -403,13 +403,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_sim_succao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_justificativa",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_justificativa",
                             "label": "Por que não houve limpeza do poço de sucção?",
                             "mandatory": true,
                             "visible": true,
@@ -417,7 +417,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_sim_succao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -431,7 +431,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_justificativa_outros_texto",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza do poço de sucção",
                             "mandatory": true,
                             "visible": true,
@@ -439,13 +439,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_sim_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_justificativa_outros_foto",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_justificativa_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -453,7 +453,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_sim_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
@@ -1225,8 +1225,8 @@
 
 
                         {
-                            "description": "servicos_rec_limpeza_bomba_01",
-                            "label": "Houve limpeza de Bomba 01?",
+                            "description": "servicos_rec_limpeza_bomba_01_nao",
+                            "label": "Houve limpeza da Bomba 01?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
@@ -1239,7 +1239,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_01_sim",
+                            "description": "servicos_rec_limpeza_bomba_01_nao_sim",
                             "label": "Foto comprovando a limpeza da Bomba 01",
                             "mandatory": true,
                             "visible": true,
@@ -1247,21 +1247,21 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_01_nao",
-                            "label": "Por que não houve limpeza da Bomba 02?",
+                            "description": "servicos_rec_limpeza_bomba_01__nao_nao",
+                            "label": "Por que não houve limpeza da Bomba 01?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -1275,7 +1275,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_01_nao_outros_texto",
+                            "description": "servicos_rec_limpeza_bomba_01__nao_nao_outros_texto",
                             "label": "Justifique porque não houve limpeza da Bomba 01",
                             "mandatory": true,
                             "visible": true,
@@ -1283,13 +1283,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_01_nao_outros_foto",
+                            "description": "servicos_rec_limpeza_bomba_01_nao_nao_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -1297,7 +1297,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
@@ -1379,7 +1379,7 @@
 
 
                         {
-                            "description": "servicos_rec_limpeza_bomba_02",
+                            "description": "servicos_rec_limpeza_bomba_02_nao",
                             "label": "Houve limpeza de Bomba 02?",
                             "mandatory": false,
                             "visible": true,
@@ -1393,7 +1393,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_sim",
+                            "description": "servicos_rec_limpeza_bomba_02__nao_sim",
                             "label": "Foto comprovando a limpeza da Bomba 02",
                             "mandatory": true,
                             "visible": true,
@@ -1401,13 +1401,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_nao",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_nao",
                             "label": "Por que não houve limpeza da Bomba 02?",
                             "mandatory": true,
                             "visible": true,
@@ -1415,7 +1415,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -1429,7 +1429,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_outros_texto",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_outros_texto",
                             "label": "Justifique porque não houve limpeza da Bomba 02",
                             "mandatory": true,
                             "visible": true,
@@ -1437,13 +1437,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_02_nao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_outros_foto",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -1451,7 +1451,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_02_nao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
