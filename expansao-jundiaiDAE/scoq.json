@@ -1669,25 +1669,11 @@
 
 
                         {
-                            "description": "inspecoes_rec_amperagem_aerador_01",
-                            "label": "Qual a amperagem do Aerador 01? (>/= 25A)",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "TEXT",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Inspeções REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "inspecoes_rec_amperagem_aerador_02",
-                            "label": "Qual a amperagem do Aerador 02? (>/= 25A)",
+                            "description": "inspecoes_rec_amperagem_aerador",
+                            "label": "A amperagem dos aeradores está superior a 25A?",
                             "mandatory": false,
                             "visible": true,
-                            "fieldType": "TEXT",
+                            "fieldType": "BOOLEAN",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Inspeções REC",
@@ -1697,6 +1683,66 @@
                             ]
                         },
 
+
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_01",
+                            "label": "A amperagem do Aerador 01 está superior a 25A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_01_valor",
+                            "label": "Qual a amperagem do Aerador 01?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_aerador_01",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_02",
+                            "label": "A amperagem do Aerador 02 está superior a 25A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_02_valor",
+                            "label": "Qual a amperagem do Aerador 02?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_aerador_02",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
 
 
                         {
