@@ -133,7 +133,7 @@
                         {
                             "description": "servicos_rec_limpeza_poco",
                             "label": "Foi efetuado a limpeza do poço da elevatória?",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
@@ -199,7 +199,7 @@
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "TEXT",
+                            "fieldType": "PHOTO",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
@@ -216,7 +216,7 @@
                         ,{
                             "description": "servicos_rec_limpeza_caixa_areia",
                             "label": "Houve limpeza da caixa de areia?",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
@@ -243,7 +243,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_caixa_areia_justificativa",
-                            "label": "Por que não houve limpeza da caixa da areia?",
+                            "label": "Por que não houve limpeza da caixa de areia?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
