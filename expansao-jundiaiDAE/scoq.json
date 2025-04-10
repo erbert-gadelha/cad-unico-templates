@@ -297,7 +297,7 @@
 
 
                         {
-                            "description": "servicos_rec_limpeza_grades",
+                            "description": "servicos_rec_limpeza_grades_sim",
                             "label": "Houve limpeza das grades?",
                             "mandatory": false,
                             "visible": true,
@@ -311,7 +311,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_grades_photo",
+                            "description": "servicos_rec_limpeza_grades_sim_photo",
                             "label": "Foto comprovando a limpeza das grades",
                             "mandatory": true,
                             "visible": true,
@@ -319,13 +319,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_sim",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_grades_justificativa",
+                            "description": "servicos_rec_limpeza_grades_sim_justificativa",
                             "label": "Por que não houve limpeza das grades?",
                             "mandatory": true,
                             "visible": true,
@@ -333,7 +333,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_sim",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -347,7 +347,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_grades_justificativa_outros_texto",
+                            "description": "servicos_rec_limpeza_grades_sim_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza das grades",
                             "mandatory": true,
                             "visible": true,
@@ -355,13 +355,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_sim_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_grades_justificativa_outros_foto",
+                            "description": "servicos_rec_limpeza_grades_sim_justificativa_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -369,7 +369,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_sim_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
@@ -868,7 +868,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_01_nao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
@@ -882,7 +882,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_01_nao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
@@ -1070,7 +1070,7 @@
                             "fieldType": "PHOTO",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? Sim",
+                                    "description": "Exibir se a resposta for? sim",
                                     "sourceFieldDescription": "servicos_rec_limpeza_grades",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
