@@ -365,7 +365,7 @@
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "FOTO",
+                            "fieldType": "PHOTO",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
@@ -619,7 +619,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_iodo_m3_reator_01_sim_outros_FOTO",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_01_sim_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -1040,7 +1040,7 @@
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "FOTO",
+                            "fieldType": "PHOTO",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
