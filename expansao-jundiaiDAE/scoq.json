@@ -132,7 +132,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_poco",
-                            "label": "Foi efetuado a limpeza de poço da elevatória?",
+                            "label": "Foi efetuado a limpeza do poço da elevatória?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "BOOLEAN",
@@ -460,7 +460,84 @@
                         }
 
 
-
+                        ,{
+                            "description": "servicos_rec_tanque_clarificado",
+                            "label": "Houve limpeza do tanque clarificado?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_clarificado_photo",
+                            "label": "Foto comprovando a limpeza do tanque clarificado",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_tanque_clarificado",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_clarificado_justificativa",
+                            "label": "Por que não houve limpeza do tanque clarificado?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_tanque_clarificado",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_clarificado_justificativa_outros_texto",
+                            "label": "Justifique porque não houve limpeza do tanque clarificado",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_tanque_clarificado_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_clarificado_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_tanque_clarificado_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
 
 
 
@@ -471,7 +548,7 @@
                         ,{
                             "description": "servicos_rec_tanque_desinfeccao",
                             "label": "Houve limpeza do tanque de desinfecção?",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
