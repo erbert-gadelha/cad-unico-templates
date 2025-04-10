@@ -299,7 +299,7 @@
                         {
                             "description": "servicos_rec_limpeza_grades",
                             "label": "Houve limpeza das grades?",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
@@ -811,7 +811,7 @@
 
                         {
                             "description": "servicos_rec_limpeza_bomba_01",
-                            "label": "Houve limpeza de Bomba 01?",
+                            "label": "Houve limpeza da Bomba 01?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
@@ -839,7 +839,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_bomba_01_nao",
-                            "label": "Por que não houve limpeza da Bomba 02?",
+                            "label": "Por que não houve limpeza da Bomba 01?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
@@ -868,7 +868,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_02_nao",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_01_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
@@ -882,7 +882,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_02_nao",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_01_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
@@ -1051,12 +1051,12 @@
                         {
                             "description": "servicos_rec_limpeza_grades",
                             "label": "Houve limpeza das grades?",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? Sim",
+                                    "description": "Exibir se a resposta for? Não",
                                     "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
