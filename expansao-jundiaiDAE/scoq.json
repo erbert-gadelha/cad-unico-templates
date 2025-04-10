@@ -1453,12 +1453,14 @@
                                 }
                             ]
                         },
+
+
                         {
-                            "description": "inspecoes_rec_amperagem_bomba_01",
-                            "label": "Qual a amperagem da Bomba 01? (>/= 15A)",
-                            "mandatory": true,
+                            "description": "inspecoes_rec_amperagem_bomba",
+                            "label": "A amperagem das bombas está superior a 15A?",
+                            "mandatory": false,
                             "visible": true,
-                            "fieldType": "TEXT",
+                            "fieldType": "BOOLEAN",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Inspeções REC",
@@ -1467,16 +1469,63 @@
                                 }
                             ]
                         },
+
+
                         {
-                            "description": "inspecoes_rec_amperagem_bomba_02",
-                            "label": "Qual a amperagem da Bomba 02? (>/= 15A)",
+                            "description": "inspecoes_rec_amperagem_bomba_01",
+                            "label": "A amperagem da Bomba 01 está superior a 15A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba_01_valor",
+                            "label": "Qual a amperagem da Bomba 01?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "TEXT",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? Inspeções REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_bomba_01",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba_02",
+                            "label": "A amperagem da Bomba 02 está superior a 15A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba_02_valor",
+                            "label": "Qual a amperagem da Bomba 02?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_bomba_02",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
