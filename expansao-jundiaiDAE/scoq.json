@@ -1447,7 +1447,7 @@
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "description": "Exibir se a resposta for? Inspeções REC",
                                     "sourceFieldDescription": "opcoes_checklist",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
