@@ -811,7 +811,7 @@
 
                         {
                             "description": "servicos_rec_limpeza_bomba_01",
-                            "label": "Houve limpeza de Bomba 02?",
+                            "label": "Houve limpeza de Bomba 01?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
@@ -825,7 +825,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_bomba_01_sim",
-                            "label": "Foto comprovando a limpeza da Bomba 02",
+                            "label": "Foto comprovando a limpeza da Bomba 01",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "PHOTO",
@@ -861,7 +861,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_bomba_01_nao_outros_texto",
-                            "label": "Justifique porque não houve limpeza da Bomba 02",
+                            "label": "Justifique porque não houve limpeza da Bomba 01",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
@@ -965,7 +965,7 @@
 
                         {
                             "description": "servicos_rec_limpeza_bomba_02",
-                            "label": "Houve limpeza de Bomba 01?",
+                            "label": "Houve limpeza de Bomba 02?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
@@ -979,7 +979,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_bomba_02_sim",
-                            "label": "Foto comprovando a limpeza da Bomba 01",
+                            "label": "Foto comprovando a limpeza da Bomba 02",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "PHOTO",
@@ -993,7 +993,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_bomba_02_nao",
-                            "label": "Por que não houve limpeza da Bomba 01?",
+                            "label": "Por que não houve limpeza da Bomba 02?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
@@ -1015,7 +1015,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_bomba_02_nao_outros_texto",
-                            "label": "Justifique porque não houve limpeza da Bomba 01",
+                            "label": "Justifique porque não houve limpeza da Bomba 02",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
