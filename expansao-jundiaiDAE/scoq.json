@@ -348,7 +348,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_grades_justificativa_outros_texto",
-                            "label": "Justifique porque não houve limpeza da caixa de areia",
+                            "label": "Justifique porque não houve limpeza das grades",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
