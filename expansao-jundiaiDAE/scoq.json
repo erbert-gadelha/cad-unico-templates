@@ -1147,7 +1147,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_photo",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_sim_photo",
                             "label": "Foto comprovando a limpeza do cesto do poço de sucção",
                             "mandatory": true,
                             "visible": true,
@@ -1161,7 +1161,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa",
                             "label": "Por que não houve limpeza do cesto do poço de sucção?",
                             "mandatory": true,
                             "visible": true,
@@ -1183,7 +1183,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa_outros_texto",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza do cesto poço de sucção",
                             "mandatory": true,
                             "visible": true,
@@ -1191,13 +1191,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa_outros_foto",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -1205,7 +1205,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
