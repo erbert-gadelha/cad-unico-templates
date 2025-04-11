@@ -1070,7 +1070,7 @@
                             "fieldType": "PHOTO",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? sim",
+                                    "description": "Exibir se a resposta for? Sim",
                                     "sourceFieldDescription": "servicos_rec_limpeza_grades_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
@@ -1135,7 +1135,7 @@
                         {
                             "description": "servicos_rec_limpeza_cesta_poco_succao_nao",
                             "label": "Houve limpeza do cesto do poço de sucção?",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
