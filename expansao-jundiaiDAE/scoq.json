@@ -1564,7 +1564,7 @@
                         },
 
                         {
-                            "description": "inspecoes_rec_amperagem_bomba_01_valor",
+                            "description": "inspecoes_rec_amperagem_bomba_01_valor_NUMBER-2",
                             "label": "Qual a amperagem da Bomba 01?",
                             "mandatory": false,
                             "visible": true,
@@ -1594,7 +1594,7 @@
                             ]
                         },
                         {
-                            "description": "inspecoes_rec_amperagem_bomba_02_valor",
+                            "description": "inspecoes_rec_amperagem_bomba_02_valor_NUMBER-2",
                             "label": "Qual a amperagem da Bomba 02?",
                             "mandatory": false,
                             "visible": true,
@@ -1777,7 +1777,7 @@
                         },
 
                         {
-                            "description": "inspecoes_rec_amperagem_aerador_01_valor",
+                            "description": "inspecoes_rec_amperagem_aerador_01_valor_NUMBER-2",
                             "label": "Qual a amperagem do Aerador 01?",
                             "mandatory": false,
                             "visible": true,
@@ -1807,7 +1807,7 @@
                             ]
                         },
                         {
-                            "description": "inspecoes_rec_amperagem_aerador_02_valor",
+                            "description": "inspecoes_rec_amperagem_aerador_02_valor_NUMBER-2",
                             "label": "Qual a amperagem do Aerador 02?",
                             "mandatory": false,
                             "visible": true,
