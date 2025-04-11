@@ -146,7 +146,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_poco_foto",
-                            "label": "Foto da limpeza de poço da elevatória",
+                            "label": "Foto da limpeza do poço da elevatória",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "PHOTO",
@@ -160,7 +160,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_poco_justificativa",
-                            "label": "Por que não houve limpeza de poço?",
+                            "label": "Por que não houve limpeza do poço da elevatória?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
@@ -182,7 +182,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_poco_foto_justificativa_outros_texto",
-                            "label": "Justifique porque não houve limpeza de poço",
+                            "label": "Justifique porque não houve limpeza do poço da elevatória",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
@@ -403,7 +403,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_sim_succao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_sim",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
@@ -683,7 +683,7 @@
                         },
                         {
                             "description": "servicos_rec_retirada_iodo_m3_reator_01_nao_outros_texto",
-                            "label": "Justifique porque não houve limpeza de poço",
+                            "label": "Justifique porque não houve retirada de Iodo do Reator 01",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
@@ -747,7 +747,7 @@
                         },
                         {
                             "description": "servicos_rec_retirada_iodo_m3_reator_02_nao",
-                            "label": "Por que não houve Retirada de Iodo do Reator 02?",
+                            "label": "Por que não houve retirada de Iodo do Reator 02?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
@@ -769,7 +769,7 @@
                         },
                         {
                             "description": "servicos_rec_retirada_iodo_m3_reator_02_sim_outros_texto",
-                            "label": "Justifique porque não houve limpeza de poço",
+                            "label": "Justifique porque não houve retirada de Iodo do Reator 02",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
@@ -1148,7 +1148,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_cesta_poco_succao_photo",
-                            "label": "Foto comprovando a limpeza do poço de sucção",
+                            "label": "Foto comprovando a limpeza do cesto do poço de sucção",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "PHOTO",
@@ -1162,7 +1162,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
-                            "label": "Por que não houve limpeza do poço de sucção?",
+                            "label": "Por que não houve limpeza do cesto do poço de sucção?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
@@ -1184,7 +1184,7 @@
                         },
                         {
                             "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa_outros_texto",
-                            "label": "Justifique porque não houve limpeza do poço de sucção",
+                            "label": "Justifique porque não houve limpeza do cesto poço de sucção",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
