@@ -646,7 +646,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_iodo_m3_reator_01_sim",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_01_sim_NUMBER-2",
                             "label": "Retirada de Iodo (m³) do Reator 01",
                             "mandatory": false,
                             "visible": true,
@@ -732,7 +732,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_iodo_m3_reator_02_sim",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_02_sim_NUMBER-2",
                             "label": "Retirada de Iodo (m³) do Reator 02",
                             "mandatory": false,
                             "visible": true,
