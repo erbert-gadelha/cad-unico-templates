@@ -1253,7 +1253,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_01__nao_nao",
+                            "description": "servicos_rec_limpeza_bomba_01_nao_nao",
                             "label": "Por que não houve limpeza da Bomba 01?",
                             "mandatory": true,
                             "visible": true,
@@ -1275,7 +1275,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_01__nao_nao_outros_texto",
+                            "description": "servicos_rec_limpeza_bomba_01_nao_nao_outros_texto",
                             "label": "Justifique porque não houve limpeza da Bomba 01",
                             "mandatory": true,
                             "visible": true,
@@ -1393,7 +1393,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_sim",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_sim_foto",
                             "label": "Foto comprovando a limpeza da Bomba 02",
                             "mandatory": true,
                             "visible": true,
@@ -1407,7 +1407,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_nao",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_justificativa",
                             "label": "Por que não houve limpeza da Bomba 02?",
                             "mandatory": true,
                             "visible": true,
@@ -1429,7 +1429,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_outros_texto",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza da Bomba 02",
                             "mandatory": true,
                             "visible": true,
@@ -1437,13 +1437,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_nao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_outros_foto",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_jutificativa_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -1451,7 +1451,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_nao",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
