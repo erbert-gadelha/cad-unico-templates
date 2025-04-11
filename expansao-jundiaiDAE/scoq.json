@@ -1534,7 +1534,7 @@
 
                         {
                             "description": "inspecoes_rec_amperagem_bomba",
-                            "label": "A amperagem das bombas está superior a 15A?",
+                            "label": "A amperagem de alguma bomba está superior a 15A?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
@@ -1747,7 +1747,7 @@
 
                         {
                             "description": "inspecoes_rec_amperagem_aerador",
-                            "label": "A amperagem dos aeradores está superior a 25A?",
+                            "label": "A amperagem de algum aerador está superior a 25A?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
