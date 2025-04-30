@@ -132,7 +132,7 @@
                         },
                         {
                             "description": "intercorrencia_qntd",
-                            "label": "Justificativa de atraso (1)",
+                            "label": "Quantas intercorrências houveram",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
