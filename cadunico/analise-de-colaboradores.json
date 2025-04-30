@@ -132,6 +132,12 @@
                                     "value": "Desligamento"
                                 }
                             ]
+                        },{
+                            "description": "colaborador_justificativa_avaliacao",
+                            "label": "Justifique com a razão da avaliação",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT"                     
                         },
 
 
@@ -188,7 +194,7 @@
                         },
                         {
                             "description": "colaborador_tempo_colaboracao",
-                            "label": "Quanto tempo o colaborador faz parte da empresa",
+                            "label": "Há quanto tempo o colaborador faz parte da empresa",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT"
