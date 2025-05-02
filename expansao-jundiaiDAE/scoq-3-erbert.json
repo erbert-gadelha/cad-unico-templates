@@ -1,0 +1,1679 @@
+{
+    "name": "S.C.O.Q-3 - DAE/Jundiaí",
+    "description": "Sistema de Controle de Operações e Qualidade - DAE/Jundiaí",
+    "group": "REC",
+    "processStatus": [
+        {
+            "important": false,
+            "terminalStatus": false,
+            "statusMode": "NORMAL",
+            "mainStream": true,
+            "description": "Tarefa não finalizada",
+            "limitValue": 3,
+            "timeLimitRule": 10,
+            "unitOfTimeType": "MINUTES",
+            "subStatus": []
+        },
+        {
+            "important": false,
+            "terminalStatus": false,
+            "statusMode": "NORMAL",
+            "mainStream": true,
+            "description": "Tarefa finalizada",
+            "limitValue": 3,
+            "timeLimitRule": 10,
+            "unitOfTimeType": "MINUTES",
+            "subStatus": []
+        }
+    ],
+    "tasks": [
+        {
+            "description": "S.C.O.Q-3",
+            "executionOrder": 1,
+            "group": "REC",
+            "currentStatus": "Tarefa não finalizada",
+            "whenTaskStatusIs": "COMPLETED",
+            "processStatusGoesTo": [
+                "Tarefa finalizada"
+            ],
+            "actions": [
+                {
+                    "displayOrder": 1,
+                    "description": "S.C.O.Q-3",
+                    "possibleNextActions": [],
+                    "setTaskStatus": "COMPLETED",
+                    "isMobile": true,
+                    "events": [],
+                    "fields":[
+                        {
+                            "description": "qr_code_local",
+                            "label": "Leitura do QR Code Local",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "QR_CODE"
+                        },
+                        {
+                            "description": "local",
+                            "label": "Local",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "-recebe texto do QRCode lido-",
+                                    "sourceFieldDescription": "qr_code_local",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "quebra_tela_1",
+                            "label": "quebra_tela",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "SCREEN_BREAKING"
+                        },
+                        {
+                            "description": "geo",
+                            "label": "Geo",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "GEOLOCATION"
+                        },
+
+
+                        {
+                            "description": "opcoes_checklist",
+                            "label": "Escolha um checklist",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Serviços REC"
+                                },
+                                {
+                                    "value": "Inspeções REC"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "quebra_tela_2",
+                            "label": "quebra_tela",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "SCREEN_BREAKING"
+                        },
+                        {
+                            "description": "utilizando_epi",
+                            "label": "Está usando os EPI's necessários para a execução da atividade?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN"
+                        },
+
+
+                        {
+                            "description": "servicos_rec_caminhao_limpa_fossa",
+                            "label": "Foi utilizado o caminhão limpa fossa?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_poco",
+                            "label": "Foi efetuado a limpeza do poço da elevatória?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_poco_foto",
+                            "label": "Foto da limpeza do poço da elevatória",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_poco",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_poco_justificativa",
+                            "label": "Por que não houve limpeza do poço da elevatória?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_poco",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_poco_foto_justificativa_outros_texto",
+                            "label": "Justifique porque não houve limpeza do poço da elevatória",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_poco_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_poco_foto_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_poco_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
+                        
+
+
+
+                        
+                        ,{
+                            "description": "servicos_rec_limpeza_caixa_areia",
+                            "label": "Houve limpeza da caixa de areia?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_caixa_areia_photo",
+                            "label": "Foto comprovando a limpeza da caixa de areia",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_caixa_areia",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_caixa_areia_justificativa",
+                            "label": "Por que não houve limpeza da caixa de areia?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_caixa_areia",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_caixa_areia_justificativa_outros_texto",
+                            "label": "Justifique porque não houve limpeza da caixa de areia",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_caixa_areia_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_caixa_areia_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_caixa_areia_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+
+
+
+                        {
+                            "description": "servicos_rec_limpeza_grades",
+                            "label": "Houve limpeza das grades?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_grades_sim_photo",
+                            "label": "Foto comprovando a limpeza das grades",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_grades_nao_justificativa",
+                            "label": "Por que não houve limpeza das grades?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_grades_nao_justificativa_texto",
+                            "label": "Justifique porque não houve limpeza das grades",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_nao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_grades_nao_justificativa_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_nao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+
+
+
+                        
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poco_succao",
+                            "label": "Houve limpeza do cesto do poço de sucção?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_photo",
+                            "label": "Foto comprovando a limpeza do cesto do poço de sucção",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
+                            "label": "Por que não houve limpeza do cesto do poço de sucção?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa_texto",
+                            "label": "Justifique porque não houve limpeza do cesto do poço de sucção",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        ,{
+                            "description": "servicos_rec_tanque_clarificado",
+                            "label": "Houve limpeza do tanque clarificado?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_clarificado_photo",
+                            "label": "Foto comprovando a limpeza do tanque clarificado",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_tanque_clarificado",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_clarificado_justificativa",
+                            "label": "Por que não houve limpeza do tanque clarificado?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_tanque_clarificado",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_clarificado_justificativa_outros_texto",
+                            "label": "Justifique porque não houve limpeza do tanque clarificado",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_tanque_clarificado_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_clarificado_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_tanque_clarificado_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
+
+
+
+
+
+
+
+                        ,{
+                            "description": "servicos_rec_tanque_desinfeccao",
+                            "label": "Houve limpeza do tanque de desinfecção?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_desinfeccao_photo",
+                            "label": "Foto comprovando a limpeza do tanque de desinfecção",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_tanque_desinfeccao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_desinfeccao_justificativa",
+                            "label": "Por que não houve limpeza do tanque de desinfecção?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_tanque_desinfeccao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_desinfeccao_justificativa_outros_texto",
+                            "label": "Justifique porque não houve limpeza do tanque de desinfecção",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_tanque_desinfeccao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_tanque_desinfeccao_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_tanque_desinfeccao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
+
+
+
+                        ,
+
+
+
+                       
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_01",
+                            "label": "Houve retirada de Lodo (m³) do Reator 01?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_01_sim_NUMBER-2",
+                            "label": "Retirada de Lodo (m³) do Reator 01",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_01",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_01_nao",
+                            "label": "Por que não houve Retirada de Lodo do Reator 01?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_01",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_01_nao_outros_texto",
+                            "label": "Justifique porque não houve retirada de Lodo do Reator 01",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_01_nao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_01_sim_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_01_nao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
+
+
+
+                        ,
+
+
+
+
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_02",
+                            "label": "Houve retirada de Lodo (m³) do Reator 02?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_02_sim_NUMBER-2",
+                            "label": "Retirada de Lodo (m³) do Reator 02",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_02",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_02_nao",
+                            "label": "Por que não houve retirada de Lodo do Reator 02?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_02",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_02_sim_outros_texto",
+                            "label": "Justifique porque não houve retirada de Lodo do Reator 02",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_02_nao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_retirada_lodo_m3_reator_02_sim_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_02_nao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        }
+
+
+
+
+
+
+
+                       
+                        
+                        
+                        ,
+
+
+
+
+
+
+                        {
+                            "description": "servicos_rec_limpeza_bomba_01",
+                            "label": "Houve limpeza da Bomba 01?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_bomba_01_sim",
+                            "label": "Foto comprovando a limpeza da Bomba 01",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_bomba_01_nao_justificativa",
+                            "label": "Por que não houve limpeza da Bomba 01?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_bomba_01_nao_justificativa_outros_texto",
+                            "label": "Justifique porque não houve limpeza da Bomba 01",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_bomba_01_nao_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+
+
+
+
+
+
+                        {
+                            "description": "servicos_rec_limpeza_bomba_02",
+                            "label": "Houve limpeza da Bomba 02?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_bomba_02_sim_foto",
+                            "label": "Foto comprovando a limpeza da Bomba 02",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_bomba_02_nao_justificativa",
+                            "label": "Por que não houve limpeza da Bomba 02?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Fora de cronograma"
+                                },
+                                {
+                                    "value": "Outros"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_bomba_02_nao_justificativa_outros_texto",
+                            "label": "Justifique porque não houve limpeza da Bomba 02",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "servicos_rec_limpeza_bomba_02_nao_justificativa_outros_foto",
+                            "label": "Comprove sua justificativa com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Outros",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_justificativa",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+
+
+
+
+
+
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba",
+                            "label": "A amperagem de alguma bomba está superior a 15A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba_01",
+                            "label": "A amperagem da Bomba 01 está superior a 15A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba_01_valor_NUMBER-2",
+                            "label": "Qual a amperagem da Bomba 01?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_bomba_01",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba_02",
+                            "label": "A amperagem da Bomba 02 está superior a 15A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_amperagem_bomba_02_valor_NUMBER-2",
+                            "label": "Qual a amperagem da Bomba 02?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_bomba_02",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_ruido_bomba",
+                            "label": "Alguma bomba apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_ruido_bomba_quais_bombas_sim",
+                            "label": "Qual bomba apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_ruido_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Bomba 01"
+                                },
+                                {
+                                    "value": "Bomba 02"
+                                },
+                                {
+                                    "value": "Ambas as Bombas"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_ruido_bomba_quais_bombas_nao",
+                            "label": "Qual bomba não apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_ruido_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Bomba 01"
+                                },
+                                {
+                                    "value": "Bomba 02"
+                                },
+                                {
+                                    "value": "Ambas as Bombas"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_vibracao_bomba",
+                            "label": "Alguma bomba apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_ruido_vibracao_quais_bombas_sim",
+                            "label": "Qual bomba apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_vibracao_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Bomba 01"
+                                },
+                                {
+                                    "value": "Bomba 02"
+                                },
+                                {
+                                    "value": "Ambas as Bombas"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_ruido_bomba_quais_bombas_nao",
+                            "label": "Qual bomba não apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_vibracao_bomba",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Bomba 01"
+                                },
+                                {
+                                    "value": "Bomba 02"
+                                },
+                                {
+                                    "value": "Ambas as Bombas"
+                                }
+                            ]
+                        },
+
+
+
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador",
+                            "label": "A amperagem de algum aerador está superior a 25A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_01",
+                            "label": "A amperagem do Aerador 01 está superior a 25A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_01_valor_NUMBER-2",
+                            "label": "Qual a amperagem do Aerador 01?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_aerador_01",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_02",
+                            "label": "A amperagem do Aerador 02 está superior a 25A?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_amperagem_aerador_02_valor_NUMBER-2",
+                            "label": "Qual a amperagem do Aerador 02?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_amperagem_aerador_02",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_ruido_aerador",
+                            "label": "Algum aerador apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_ruido_aerador_quais_aeradores_sim",
+                            "label": "Qual aerador apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_ruido_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Aerador 01"
+                                },
+                                {
+                                    "value": "Aerador 02"
+                                },
+                                {
+                                    "value": "Ambas os aeradores"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_ruido_aerador_quais_aeradores_nao",
+                            "label": "Qual aerador não apresenta ruído?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_ruido_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Aerador 01"
+                                },
+                                {
+                                    "value": "Aerador 02"
+                                },
+                                {
+                                    "value": "Ambas os aeradores"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_vibracao_aerador",
+                            "label": "Algum aerador apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_ruido_vibracao_quais_aeradores_sim",
+                            "label": "Qual aerador apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_vibracao_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Aerador 01"
+                                },
+                                {
+                                    "value": "Aerador 02"
+                                },
+                                {
+                                    "value": "Ambas os aeradores"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_ruido_aerador_quais_aeradores_nao",
+                            "label": "Qual aerador não apresenta vibração?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_vibracao_aerador",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+                            "fieldValues": [
+                                {
+                                    "value": "Aerador 01"
+                                },
+                                {
+                                    "value": "Aerador 02"
+                                },
+                                {
+                                    "value": "Ambas os aeradores"
+                                }
+                            ]
+                        },
+
+
+
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque",
+                            "label": "Existe algum problema na tubulação do recalque?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                            
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque_valvula",
+                            "label": "Existe problema na válvula?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_problema_tubulacao_recalque",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque_valvula_local",
+                            "label": "Qual o local do problema da válvula?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_problema_tubulacao_recalque_valvula",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque_registro",
+                            "label": "Existe problema no registro?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_problema_tubulacao_recalque",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_problema_tubulacao_recalque_registro_local",
+                            "label": "Qual o local do problema do registro?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_problema_tubulacao_recalque_registro",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_normal",
+                            "label": "A condição do efluente está normal?",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_normal_sim",
+                            "label": "Comprove que o efluente está normal com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Sim",
+                                    "sourceFieldDescription": "inspecoes_rec_condicao_efluente_normal",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_normal_nao",
+                            "label": "Comprove que o efluente está fora do normal com uma foto",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Não",
+                                    "sourceFieldDescription": "inspecoes_rec_condicao_efluente_normal",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_coloracao",
+                            "label": "Coloração do efluente",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ],
+
+                            "fieldValues": [
+                                {
+                                    "value": "Cinza"
+                                },
+                                {
+                                    "value": "???"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_coloracao_cinza",
+                            "label": "Comprove que o efluente está com a cor cinza",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Cinza",
+                                    "sourceFieldDescription": "inspecoes_rec_condicao_efluente_coloracao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "inspecoes_rec_condicao_efluente_coloracao_outro",
+                            "label": "Capture uma foto mostrando qual a coloração do efluente",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "PHOTO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? ???",
+                                    "sourceFieldDescription": "inspecoes_rec_condicao_efluente_coloracao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+
+
+                        {
+                            "description": "inspecao_rec_observacao",
+                            "label": "Observações",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "gravar_audio",
+                            "label": "Gravar audio",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "AUDIO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "assinatura",
+                            "label": "Assinatura do responsável",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "SIGNATURE"
+                        },
+                        {
+                            "description": "re_do_responsavel",
+                            "label": "R.E do responsável",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "TEXT"
+                        },
+                        {
+                            "description": "status_rec",
+                            "label": "Status",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "LIST",
+                            "fieldValues": [
+                                {
+                                    "value": "Em andamento"
+                                },
+                                {
+                                    "value": "Finalizado"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
