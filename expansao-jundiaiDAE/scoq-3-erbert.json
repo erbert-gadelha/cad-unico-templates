@@ -1,5 +1,5 @@
 {
-    "name": "S.C.O.Q-3 - DAE/Jundiaí",
+    "name": "S.C.O.Q - DAE/Jundiaí",
     "description": "Sistema de Controle de Operações e Qualidade - DAE/Jundiaí",
     "group": "REC",
     "processStatus": [
@@ -28,7 +28,7 @@
     ],
     "tasks": [
         {
-            "description": "S.C.O.Q-3",
+            "description": "S.C.O.Q",
             "executionOrder": 1,
             "group": "REC",
             "currentStatus": "Tarefa não finalizada",
@@ -39,7 +39,7 @@
             "actions": [
                 {
                     "displayOrder": 1,
-                    "description": "S.C.O.Q-3",
+                    "description": "S.C.O.Q",
                     "possibleNextActions": [],
                     "setTaskStatus": "COMPLETED",
                     "isMobile": true,
