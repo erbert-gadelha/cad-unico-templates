@@ -333,7 +333,7 @@
                             "fieldType": "TEXT",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir campo se a resposta for? Sim",
+                                    "description": "Exibir campo se a resposta for? Não",
                                     "fieldRuleActionType": "DISPLAY_FIELD",
                                     "sourceFieldDescription": "intercorrencia_interacao_gestor"
                                 }

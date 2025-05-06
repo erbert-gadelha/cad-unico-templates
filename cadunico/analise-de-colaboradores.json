@@ -200,6 +200,13 @@
                             "fieldType": "TEXT"
                         },
                         {
+                            "description": "colaborador_tempo_no_cargo",
+                            "label": "Há quanto tempo o colaborador atua na empresa nesta função que exerce",
+                            "mandatory": true,
+                            "visible": true,
+                            "fieldType": "TEXT"
+                        },
+                        {
                             "description": "gravar_audio",
                             "label": "Gravar audio",
                             "mandatory": false,
