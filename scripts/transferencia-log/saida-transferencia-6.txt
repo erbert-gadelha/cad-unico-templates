@@ -1,0 +1,22 @@
+51: (cras.santoamaro) 	 {'employees': [{'id': 78, 'taskIds': [58]}], 'location': {'id': 44}, 'isAutomatic': True}
+52: (cras.sapopemba) 	 {'employees': [{'id': 81, 'taskIds': [58]}], 'location': {'id': 47}, 'isAutomatic': True}
+53: (cras.saomateus) 	 {'employees': [{'id': 79, 'taskIds': [58]}], 'location': {'id': 45}, 'isAutomatic': True}
+54: (cras.saomiguelpaulista) 	 {'employees': [{'id': 80, 'taskIds': [58]}], 'location': {'id': 46}, 'isAutomatic': True}
+55: (cras.se) 	 {'employees': [{'id': 82, 'taskIds': [58]}], 'location': {'id': 98}, 'isAutomatic': True}
+56: (cras.tremembe) 	 {'employees': [{'id': 83, 'taskIds': [58]}], 'location': {'id': 48}, 'isAutomatic': True}
+57: (cras.vilaandrade) 	 {'employees': [{'id': 85, 'taskIds': [58]}], 'location': {'id': 49}, 'isAutomatic': True}
+58: (cras.vilacuruca) 	 {'employees': [{'id': 86, 'taskIds': [58]}], 'location': {'id': 50}, 'isAutomatic': True}
+59: (cras.vilamaria) 	 {'employees': [{'id': 87, 'taskIds': [58]}], 'location': {'id': 51}, 'isAutomatic': True}
+60: (cras.vilamariana) 	 {'employees': [{'id': 84, 'taskIds': [58]}], 'location': {'id': 52}, 'isAutomatic': True}
+
+    61: (cras.vilamedeiros) 	 {'employees': [{'id': 88, 'taskIds': [58]}], 'location': {'id': 53}, 'isAutomatic': True}
+62: (cras.vilaprudente) 	 {'employees': [{'id': 89, 'taskIds': [58]}], 'location': {'id': 54}, 'isAutomatic': True}
+    63: (descomplica.butanta) 	 {'employees': [{'id': 9, 'taskIds': [58]}], 'location': {'id': 58}, 'isAutomatic': True}
+64: (descomplica.campolimpo) 	 {'employees': [{'id': 21, 'taskIds': [58]}], 'location': {'id': 59}, 'isAutomatic': True}
+    65: (descomplica.capeladosocorro) 	 {'employees': [{'id': 22, 'taskIds': [58]}], 'location': {'id': 61}, 'isAutomatic': True}
+    66: (descomplica.cidadeademar) 	 {'employees': [{'id': 23, 'taskIds': [58]}], 'location': {'id': 56}, 'isAutomatic': True}
+    67: (descomplica.cidadetiradentes) 	 {'employees': [{'id': 43, 'taskIds': [58]}], 'location': {'id': 62}, 'isAutomatic': True}
+68: (descomplica.ermelinomatarazzo) 	 {'employees': [{'id': 44, 'taskIds': [58]}], 'location': {'id': 63}, 'isAutomatic': True}
+    69: (descomplica.freguesiadoo) 	 {'employees': [{'id': 45, 'taskIds': [58]}], 'location': {'id': 64}, 'isAutomatic': True}
+70: (descomplica.guaianases) 	 {'employees': [{'id': 46, 'taskIds': [58]}], 'location': {'id': 65}, 'isAutomatic': True}
+    71: (descomplica.ipiranga) 	 {'employees': [{'id': 47, 'taskIds': [58]}], 'location': {'id': 66}, 'isAutomatic': True}

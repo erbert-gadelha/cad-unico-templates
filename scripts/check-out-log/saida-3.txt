@@ -1,0 +1,22 @@
+14: (cras.butanta) 	 {'employees': [{'id': 8, 'taskIds': [57]}], 'location': {'id': 10}, 'isAutomatic': True}
+15: (cras.cachoeirinha) 	 {'employees': [{'id': 10, 'taskIds': [57]}], 'location': {'id': 11}, 'isAutomatic': True}
+16: (cras.campolimpo) 	 {'employees': [{'id': 11, 'taskIds': [57]}], 'location': {'id': 12}, 'isAutomatic': True}
+17: (cras.capeladosocorro) 	 {'employees': [{'id': 25, 'taskIds': [57]}], 'location': {'id': 14}, 'isAutomatic': True}
+18: (cras.capaoredondo) 	 {'employees': [{'id': 24, 'taskIds': [57]}], 'location': {'id': 13}, 'isAutomatic': True}
+19: (cras.casaverde) 	 {'employees': [{'id': 26, 'taskIds': [57]}], 'location': {'id': 15}, 'isAutomatic': True}
+20: (cras.centrooeste) 	 {'employees': [{'id': 28, 'taskIds': [57]}], 'location': {'id': 99}, 'isAutomatic': True}
+21: (cras.cidadeademar1) 	 {'employees': [{'id': 27, 'taskIds': [57]}], 'location': {'id': 16}, 'isAutomatic': True}
+22: (cras.cidadeademar2) 	 {'employees': [{'id': 32, 'taskIds': [57]}], 'location': {'id': 17}, 'isAutomatic': True}
+23: (cras.cidadelider) 	 {'employees': [{'id': 33, 'taskIds': [57]}], 'location': {'id': 18}, 'isAutomatic': True}
+
+24: (cras.cidadetiradentes) 	 {'employees': [{'id': 34, 'taskIds': [57]}], 'location': {'id': 19}, 'isAutomatic': True}
+25: (cras.ermelinomatarazzo) 	 {'employees': [{'id': 35, 'taskIds': [57]}], 'location': {'id': 20}, 'isAutomatic': True}
+26: (cras.freguesiadoo) 	 {'employees': [{'id': 36, 'taskIds': [57]}], 'location': {'id': 21}, 'isAutomatic': True}
+27: (cras.grajau) 	 {'employees': [{'id': 37, 'taskIds': [57]}], 'location': {'id': 22}, 'isAutomatic': True}
+28: (cras.guaianases) 	 {'employees': [{'id': 38, 'taskIds': [57]}], 'location': {'id': 23}, 'isAutomatic': True}
+29: (cras.iguatemi) 	 {'employees': [{'id': 39, 'taskIds': [57]}], 'location': {'id': 96}, 'isAutomatic': True}
+30: (cras.ipiranga) 	 {'employees': [{'id': 40, 'taskIds': [57]}], 'location': {'id': 24}, 'isAutomatic': True}
+31: (cras.itaimpaulista1) 	 {'employees': [{'id': 41, 'taskIds': [57]}], 'location': {'id': 25}, 'isAutomatic': True}
+32: (cras.itaimpaulista2) 	 {'employees': [{'id': 42, 'taskIds': [57]}], 'location': {'id': 26}, 'isAutomatic': True}
+33: (cras.itaquera) 	 {'employees': [{'id': 49, 'taskIds': [57]}], 'location': {'id': 27}, 'isAutomatic': True}
+34: (cras.jabaquara) 	 {'employees': [{'id': 50, 'taskIds': [57]}], 'location': {'id': 28}, 'isAutomatic': True}

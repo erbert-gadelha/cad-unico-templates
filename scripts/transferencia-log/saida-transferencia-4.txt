@@ -1,0 +1,12 @@
+19: (cras.casaverde) 	 {'employees': [{'id': 26, 'taskIds': [58]}], 'location': {'id': 15}, 'isAutomatic': True}
+20: (cras.centrooeste) 	 {'employees': [{'id': 28, 'taskIds': [58]}], 'location': {'id': 99}, 'isAutomatic': True}
+21: (cras.cidadeademar1) 	 {'employees': [{'id': 27, 'taskIds': [58]}], 'location': {'id': 16}, 'isAutomatic': True}
+22: (cras.cidadeademar2) 	 {'employees': [{'id': 32, 'taskIds': [58]}], 'location': {'id': 17}, 'isAutomatic': True}
+23: (cras.cidadelider) 	 {'employees': [{'id': 33, 'taskIds': [58]}], 'location': {'id': 18}, 'isAutomatic': True}
+
+24: (cras.cidadetiradentes) 	 {'employees': [{'id': 34, 'taskIds': [58]}], 'location': {'id': 19}, 'isAutomatic': True}
+25: (cras.ermelinomatarazzo) 	 {'employees': [{'id': 35, 'taskIds': [58]}], 'location': {'id': 20}, 'isAutomatic': True}
+26: (cras.freguesiadoo) 	 {'employees': [{'id': 36, 'taskIds': [58]}], 'location': {'id': 21}, 'isAutomatic': True}
+27: (cras.grajau) 	 {'employees': [{'id': 37, 'taskIds': [58]}], 'location': {'id': 22}, 'isAutomatic': True}
+28: (cras.guaianases) 	 {'employees': [{'id': 38, 'taskIds': [58]}], 'location': {'id': 23}, 'isAutomatic': True}
+29: (cras.iguatemi) 	 {'employees': [{'id': 39, 'taskIds': [58]}], 'location': {'id': 96}, 'isAutomatic': True}

@@ -1,0 +1,17 @@
+77: (descomplica.mooca) 	 {'employees': [{'id': 69, 'taskIds': [57]}], 'location': {'id': 76}, 'isAutomatic': True}
+78: (descomplica.parelheiros) 	 {'employees': [{'id': 70, 'taskIds': [57]}], 'location': {'id': 82}, 'isAutomatic': True}
+79: (descomplica.penha) 	 {'employees': [{'id': 71, 'taskIds': [57]}], 'location': {'id': 83}, 'isAutomatic': True}
+80: (descomplica.perus) 	 {'employees': [{'id': 72, 'taskIds': [57]}], 'location': {'id': 85}, 'isAutomatic': True}
+81: (descomplica.pirituba) 	 {'employees': [{'id': 90, 'taskIds': [57]}], 'location': {'id': 84}, 'isAutomatic': True}
+82: (descomplica.santana) 	 {'employees': [{'id': 91, 'taskIds': [57]}], 'location': {'id': 94}, 'isAutomatic': True}
+83: (descomplica.santoamaro) 	 {'employees': [{'id': 92, 'taskIds': [57]}], 'location': {'id': 87}, 'isAutomatic': True}
+84: (descomplica.saomateus) 	 {'employees': [{'id': 93, 'taskIds': [57]}], 'location': {'id': 91}, 'isAutomatic': True}
+
+85: (descomplica.saomiguelpaulista) 	 {'employees': [{'id': 94, 'taskIds': [57]}], 'location': {'id': 77}, 'isAutomatic': True}
+86: (descomplica.se24horas) 	 {'employees': [{'id': 95, 'taskIds': [57]}], 'location': {'id': 89}, 'isAutomatic': True}
+87: (descomplica.vilamaria) 	 {'employees': [{'id': 96, 'taskIds': [57]}], 'location': {'id': 74}, 'isAutomatic': True}
+88: (movel.centrooeste) 	 {'employees': [{'id': 29, 'taskIds': [57]}], 'location': {'id': 78}, 'isAutomatic': True}
+89: (movel.leste) 	 {'employees': [{'id': 73, 'taskIds': [57]}], 'location': {'id': 79}, 'isAutomatic': True}
+90: (movel.norte) 	 {'employees': [{'id': 74, 'taskIds': [57]}], 'location': {'id': 80}, 'isAutomatic': True}
+91: (movel.sul) 	 {'employees': [{'id': 102, 'taskIds': [57]}], 'location': {'id': 81}, 'isAutomatic': True}
+92: (descomplica.vilaprudente) 	 {'employees': [{'id': 97, 'taskIds': [57]}], 'location': {'id': 100}, 'isAutomatic': True}

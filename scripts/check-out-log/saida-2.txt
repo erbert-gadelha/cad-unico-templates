@@ -1,0 +1,9 @@
+4: (centropop.santana) 	 {'employees': [{'id': 98, 'taskIds': [57]}], 'location': {'id': 93}, 'isAutomatic': True}
+5: (centropop.santoamaro) 	 {'employees': [{'id': 99, 'taskIds': [57]}], 'location': {'id': 86}, 'isAutomatic': True}
+6: (centropop.stacecilia) 	 {'employees': [{'id': 100, 'taskIds': [57]}], 'location': {'id': 88}, 'isAutomatic': True}
+7: (centropop.vilamaria) 	 {'employees': [{'id': 101, 'taskIds': [57]}], 'location': {'id': 73}, 'isAutomatic': True}
+8: (cic.cicgrajau) 	 {'employees': [{'id': 30, 'taskIds': [57]}], 'location': {'id': 60}, 'isAutomatic': True}
+10: (cras.arthuralvim) 	 {'employees': [{'id': 3, 'taskIds': [57]}], 'location': {'id': 6}, 'isAutomatic': True}
+11: (cras.brasilandia1) 	 {'employees': [{'id': 5, 'taskIds': [57]}], 'location': {'id': 7}, 'isAutomatic': True}
+12: (cras.brasilandia2) 	 {'employees': [{'id': 6, 'taskIds': [57]}], 'location': {'id': 8}, 'isAutomatic': True}
+13: (cras.brasilandia3) 	 {'employees': [{'id': 7, 'taskIds': [57]}], 'location': {'id': 9}, 'isAutomatic': True}
