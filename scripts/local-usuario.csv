@@ -1,0 +1,93 @@
+local_id,local_description,location_type,user_id,user_description
+95,Anhanguera,CRAS,1,cras.anhanguera
+90,Bela Vista,Centro Pop,4,centropop.belavista
+75,Mooca,Centro Pop,75,centropop.mooca
+93,Santana,Centro Pop,98,centropop.santana
+86,Santo Amaro,Centro Pop,99,centropop.santoamaro
+88,Sta Cecilia,Centro Pop,100,centropop.stacecilia
+73,Vila Maria ,Centro Pop,101,centropop.vilamaria
+60,CIC Grajau,CIC,30,cic.cicgrajau
+5,Aricanduva,CRAS,2,cras.aricanduva
+6,Arthur Alvin,CRAS,3,cras.arthuralvim
+7,Brasilândia I,CRAS,5,cras.brasilandia1
+8,Brasilândia II,CRAS,6,cras.brasilandia2
+9,Brasilândia III,CRAS,7,cras.brasilandia3
+10,Butantã,CRAS,8,cras.butanta
+11,Cachoeirinha,CRAS,10,cras.cachoeirinha
+12,Campo Limpo,CRAS,11,cras.campolimpo
+14,Capela do Socorro,CRAS,25,cras.capeladosocorro
+13,Capão Redondo,CRAS,24,cras.capaoredondo
+15,Casa Verde,CRAS,26,cras.casaverde
+99,Centro Oeste,CRAS,28,cras.centrooeste
+16,Cidade Ademar I,CRAS,27,cras.cidadeademar1
+17,Cidade Ademar II,CRAS,32,cras.cidadeademar2
+18,Cidade Lider,CRAS,33,cras.cidadelider
+19,Cidade Tiradentes,CRAS,34,cras.cidadetiradentes
+20,Ermelino Matarazzo,CRAS,35,cras.ermelinomatarazzo
+21,Freguesia do Ó,CRAS,36,cras.freguesiadoo
+22,Grajau,CRAS,37,cras.grajau
+23,Guianases,CRAS,38,cras.guaianases
+96,Iguatemi,CRAS,39,cras.iguatemi
+24,Ipiranga,CRAS,40,cras.ipiranga
+25,Itaim Paulista I,CRAS,41,cras.itaimpaulista1
+26,Itaim Paulista II,CRAS,42,cras.itaimpaulista2
+27,Itaqueira,CRAS,49,cras.itaquera
+28,Jabaquara,CRAS,50,cras.jabaquara
+30,Jaraguá,CRAS,52,cras.jaragua
+29,Jaçanã,CRAS,51,cras.jacana
+31,Jd. Angela,CRAS,53,cras.jdangela
+32,Jd. São Luiz,CRAS,54,cras.jdsaoluiz
+97,Lajeado,CRAS,55,cras.lajeado
+33,Lapa,CRAS,56,cras.lapa
+34,M' Boi Mirin,CRAS,57,cras.mboimirim
+35,Marsilac,CRAS,58,cras.marsilac
+36,Mooca,CRAS,59,cras.mooca
+37,Parelheiros,CRAS,60,cras.parelheiros
+38,Pedreira,CRAS,61,cras.pedreira
+39,Penha,CRAS,62,cras.penha
+40,Perus,CRAS,63,cras.perus
+41,Pinheiros,CRAS,64,cras.pinheiros
+42,Pirituba,CRAS,76,cras.pirituba
+43,Santana,CRAS,77,cras.santana
+44,Santo Amaro,CRAS,78,cras.santoamaro
+47,Sapopemba,CRAS,81,cras.sapopemba
+45,São Mateus,CRAS,79,cras.saomateus
+46,São Miguel Paulista,CRAS,80,cras.saomiguelpaulista
+98,Sé,CRAS,82,cras.se
+48,Tremembé,CRAS,83,cras.tremembe
+49,Vila Andrade,CRAS,85,cras.vilaandrade
+50,Vila Curuçá,CRAS,86,cras.vilacuruca
+51,Vila Maria,CRAS,87,cras.vilamaria
+52,Vila Mariana,CRAS,84,cras.vilamariana
+53,Vila Medeiros,CRAS,88,cras.vilamedeiros
+54,Vila Prudente,CRAS,89,cras.vilaprudente
+58,Butantã,DESCOMPLICA,9,descomplica.butanta
+59,Campo Limpo,DESCOMPLICA,21,descomplica.campolimpo
+61,Capela do Socorro,DESCOMPLICA,22,descomplica.capeladosocorro
+56,Cidade Ademar,DESCOMPLICA,23,descomplica.cidadeademar
+62,Cidade Tiradentes,DESCOMPLICA,43,descomplica.cidadetiradentes
+63,Ermelino Matarazzo,DESCOMPLICA,44,descomplica.ermelinomatarazzo
+64,Freguesia do Ó,DESCOMPLICA,45,descomplica.freguesiadoo
+65,Guaianases,DESCOMPLICA,46,descomplica.guaianases
+66,Ipiranga,DESCOMPLICA,47,descomplica.ipiranga
+68,Itaim Paulista,DESCOMPLICA,48,descomplica.itaimpaulista
+67,Itaquera,DESCOMPLICA,65,descomplica.itaqueira
+70,Jaçanã,DESCOMPLICA,66,descomplica.jacana
+71,Lapa,DESCOMPLICA,67,descomplica.lapa
+72,M' Boi Mirim,DESCOMPLICA,68,descomplica.mboimirin
+76,Mooca,DESCOMPLICA,69,descomplica.mooca
+82,Parelheiros,DESCOMPLICA,70,descomplica.parelheiros
+83,Penha,DESCOMPLICA,71,descomplica.penha
+85,Perus,DESCOMPLICA,72,descomplica.perus
+84,Pirituba,DESCOMPLICA,90,descomplica.pirituba
+94,Santana,DESCOMPLICA,91,descomplica.santana
+87,Santo Amaro,DESCOMPLICA,92,descomplica.santoamaro
+91,São Mateus,DESCOMPLICA,93,descomplica.saomateus
+77,São Miguel Paulista,DESCOMPLICA,94,descomplica.saomiguelpaulista
+89,Sé - 24Horas,DESCOMPLICA,95,descomplica.se24horas
+74,Vila Maria,DESCOMPLICA,96,descomplica.vilamaria
+78,Centro Oeste,MÓVEL,29,movel.centrooeste
+79,Leste,MÓVEL,73,movel.leste
+80,Norte,MÓVEL,74,movel.norte
+81,Sul,MÓVEL,102,movel.sul
+100,Vila Prudente,DESCOMPLICA,97,descomplica.vilaprudente

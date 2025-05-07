@@ -1,0 +1,91 @@
+CRAS, Anhanguera 
+CRAS, Aricanduva 
+CRAS, Arthur Alvim 
+Centro Pop, Bela Vista 
+CRAS, Brasilândia I 
+CRAS, Brasilândia II 
+CRAS, Brasilândia III 
+CRAS, Butantã 
+DESCOMPLICA, Butantã 
+CRAS, Cachoeirinha 
+CRAS, Campo Limpo 
+DESCOMPLICA, Campo Limpo 
+CRAS, Capão Redondo 
+CRAS, Capela do Socorro 
+DESCOMPLICA, Capela do Socorro 
+CRAS, Casa Verde 
+MÓVEL, Centro Oeste 
+CIC, CIC Grajau 
+DESCOMPLICA, Cidade Ademar 
+CRAS, Cidade Ademar I
+CRAS, Cidade Lider 
+CRAS, Cidade Tiradentes
+DESCOMPLICA, Cidade Tiradentes 
+CRAS, Ermelino Matarazzo 
+DESCOMPLICA, Ermelino Matarazzo 
+CRAS, Freguesia do Ó 
+DESCOMPLICA, Freguesia do Ó 
+CRAS, Grajau 
+CRAS, Guaianases 
+DESCOMPLICA, Guaianases 
+CRAS, Iguatemi 
+CRAS, Ipiranga 
+DESCOMPLICA, Ipiranga 
+DESCOMPLICA, Itaim Paulista 
+CRAS, Itaim Paulista I 
+CRAS, Itaim Paulista II 
+CRAS, Itaquera 
+DESCOMPLICA, Itaquera 
+CRAS, Jabaquara 
+DESCOMPLICA, Jabaquara 
+CRAS, Jaçanã 
+DESCOMPLICA, Jaçanã 
+CRAS, Jaraguá 
+CRAS, Jd. Angela 
+CRAS, Jd. São Luiz 
+CRAS, Lajeado 
+CRAS, Lapa 
+DESCOMPLICA, Lapa 
+MÓVEL, Leste 
+CRAS, M' Boi Mirim 
+DESCOMPLICA, M' Boi Mirim 
+CRAS, Marsilac 
+CRAS, Mooca 
+Centro Pop, Mooca 
+DESCOMPLICA, Mooca 
+MÓVEL, Norte
+CRAS, Parelheiros 
+DESCOMPLICA, Parelheiros 
+CRAS, Pedreira 
+CRAS, Penha 
+DESCOMPLICA, Penha 
+CRAS, Perus 
+DESCOMPLICA, Perus 
+CRAS, Pinheiros 
+DESCOMPLICA, Pirituba 
+Centro Pop, Santana 
+CRAS, Santana 
+DESCOMPLICA, Santana 
+CRAS, Santo Amaro 
+Centro Pop, Santo Amaro 
+DESCOMPLICA, Santo Amaro 
+CRAS, São Mateus 
+DESCOMPLICA, São Mateus 
+CRAS, São Miguel Paulista 
+DESCOMPLICA, São Miguel Paulista 
+CRAS, Sapopemba 
+CRAS, Sé 
+DESCOMPLICA, Sé - 24Horas 
+Volante, SMADS/GSUAS/CGB 
+Centro Pop, Sta Cecilia 
+MÓVEL, Sul 
+CRAS, Tremembé 
+CRAS, Vila Andrade 
+CRAS, Vila Curuçá 
+CRAS, Vila Maria 
+DESCOMPLICA, Vila Maria 
+Centro Pop, Vila Maria 
+CRAS, Vila Mariana 
+CRAS, Vila Medeiros 
+CRAS, Vila Prudente 
+DESCOMPLICA, Vila Prudente
