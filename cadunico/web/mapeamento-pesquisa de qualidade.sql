@@ -1,5 +1,3 @@
--- PRECISA TESTAR SE ESSA FORMATAÇÃO QUEBROU ALGO
-
 ----- SURVEY
     INSERT INTO cadunico.tb_survey
     ("uuid", "name", description, created_at)
@@ -105,7 +103,7 @@
         now(), 
         NULL, 
         NULL, 
-        'responsavel_nome', 
+        'observacoes', 
         'Observações?', 
         false, 
         'TEXT', 
