@@ -1,0 +1,12 @@
+8: (cic.cicgrajau) 	 {'employees': [{'id': 30, 'taskIds': [58]}], 'location': {'id': 60}, 'isAutomatic': True}
+9: (cras.aricanduva) 	 {'employees': [{'id': 2, 'taskIds': [58]}], 'location': {'id': 5}, 'isAutomatic': True}
+10: (cras.arthuralvim) 	 {'employees': [{'id': 3, 'taskIds': [58]}], 'location': {'id': 6}, 'isAutomatic': True}
+11: (cras.brasilandia1) 	 {'employees': [{'id': 5, 'taskIds': [58]}], 'location': {'id': 7}, 'isAutomatic': True}
+12: (cras.brasilandia2) 	 {'employees': [{'id': 6, 'taskIds': [58]}], 'location': {'id': 8}, 'isAutomatic': True}
+
+13: (cras.brasilandia3) 	 {'employees': [{'id': 7, 'taskIds': [58]}], 'location': {'id': 9}, 'isAutomatic': True}
+14: (cras.butanta) 	 {'employees': [{'id': 8, 'taskIds': [58]}], 'location': {'id': 10}, 'isAutomatic': True}
+15: (cras.cachoeirinha) 	 {'employees': [{'id': 10, 'taskIds': [58]}], 'location': {'id': 11}, 'isAutomatic': True}
+16: (cras.campolimpo) 	 {'employees': [{'id': 11, 'taskIds': [58]}], 'location': {'id': 12}, 'isAutomatic': True}
+17: (cras.capeladosocorro) 	 {'employees': [{'id': 25, 'taskIds': [58]}], 'location': {'id': 14}, 'isAutomatic': True}
+18: (cras.capaoredondo) 	 {'employees': [{'id': 24, 'taskIds': [58]}], 'location': {'id': 13}, 'isAutomatic': True}

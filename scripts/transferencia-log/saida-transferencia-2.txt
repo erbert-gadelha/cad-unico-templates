@@ -1,0 +1,6 @@
+3: (centropop.mooca) 	 {'employees': [{'id': 75, 'taskIds': [58]}], 'location': {'id': 75}, 'isAutomatic': True}
+4: (centropop.santana) 	 {'employees': [{'id': 98, 'taskIds': [58]}], 'location': {'id': 93}, 'isAutomatic': True}
+
+5: (centropop.santoamaro) 	 {'employees': [{'id': 99, 'taskIds': [58]}], 'location': {'id': 86}, 'isAutomatic': True}
+6: (centropop.stacecilia) 	 {'employees': [{'id': 100, 'taskIds': [58]}], 'location': {'id': 88}, 'isAutomatic': True}
+7: (centropop.vilamaria) 	 {'employees': [{'id': 101, 'taskIds': [58]}], 'location': {'id': 73}, 'isAutomatic': True}

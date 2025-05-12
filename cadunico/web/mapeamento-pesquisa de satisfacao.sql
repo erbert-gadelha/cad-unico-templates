@@ -1,7 +1,3 @@
--- PRECISA TESTAR SE ESSA FORMATAÇÃO QUEBROU ALGO
-
-
-
 ----- SURVEY
     INSERT INTO cadunico.tb_survey
     ("uuid", "name", description, created_at)
@@ -35,7 +31,7 @@
         true, 
         'LIST', 
         true);
-    ----- 03 - DESCRICAO DA CITAÇÃO    (DEPENDE DE 02)
+    ----- 03 - DESCRICAO DA CITAÇÃO
         INSERT INTO cadunico.tb_field
         ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
         VALUES(
@@ -49,9 +45,6 @@
         'TEXT', 
         true);
 
-        INSERT INTO cadunico.tb_field_and_field_rule
-        (field_id, field_rule_id)
-        VALUES(id_descricao_citacao, field_rule_id);    
     ----- 04 - AVALIAÇÃO DO CADASTRADOR
         INSERT INTO cadunico.tb_field
         ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
@@ -152,13 +145,13 @@
 
 ----- FIELD RULES
     ----- 03 - DESCRICAO DA CITAÇÃO     (DEPENDE DE 02)
-    INSERT INTO cadunico.tb_field_rule
-    ("uuid", created_at, updated_at, deleted_at, description, source_field_description, field_rule_action_type, value_to_fill, enable_group_tasks, go_to_next_status)
-    VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? Péssimo', 'experiencia_cadastramento', 'DISPLAY_FIELD', NULL, NULL, NULL);
+        INSERT INTO cadunico.tb_field_rule
+        ("uuid", created_at, updated_at, deleted_at, description, source_field_description, field_rule_action_type, value_to_fill, enable_group_tasks, go_to_next_status)
+        VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? Péssimo', 'experiencia_cadastramento', 'DISPLAY_FIELD', NULL, NULL, NULL);
 
-    INSERT INTO cadunico.tb_field_and_field_rule
-    (field_id, field_rule_id)
-    VALUES(id_descricao_citacao, field_rule_id);
+        INSERT INTO cadunico.tb_field_and_field_rule
+        (field_id, field_rule_id)
+        VALUES(id_descricao_citacao, field_rule_id);
 
 
 ----- SURVEY FIELDS

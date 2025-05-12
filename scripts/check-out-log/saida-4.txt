@@ -1,0 +1,22 @@
+35: (cras.jaragua) 	 {'employees': [{'id': 52, 'taskIds': [57]}], 'location': {'id': 30}, 'isAutomatic': True}
+36: (cras.jacana) 	 {'employees': [{'id': 51, 'taskIds': [57]}], 'location': {'id': 29}, 'isAutomatic': True}
+37: (cras.jdangela) 	 {'employees': [{'id': 53, 'taskIds': [57]}], 'location': {'id': 31}, 'isAutomatic': True}
+38: (cras.jdsaoluiz) 	 {'employees': [{'id': 54, 'taskIds': [57]}], 'location': {'id': 32}, 'isAutomatic': True}
+39: (cras.lajeado) 	 {'employees': [{'id': 55, 'taskIds': [57]}], 'location': {'id': 97}, 'isAutomatic': True}
+40: (cras.lapa) 	 {'employees': [{'id': 56, 'taskIds': [57]}], 'location': {'id': 33}, 'isAutomatic': True}
+41: (cras.mboimirim) 	 {'employees': [{'id': 57, 'taskIds': [57]}], 'location': {'id': 34}, 'isAutomatic': True}
+42: (cras.marsilac) 	 {'employees': [{'id': 58, 'taskIds': [57]}], 'location': {'id': 35}, 'isAutomatic': True}
+43: (cras.mooca) 	 {'employees': [{'id': 59, 'taskIds': [57]}], 'location': {'id': 36}, 'isAutomatic': True}
+44: (cras.parelheiros) 	 {'employees': [{'id': 60, 'taskIds': [57]}], 'location': {'id': 37}, 'isAutomatic': True}
+
+45: (cras.pedreira) 	 {'employees': [{'id': 61, 'taskIds': [57]}], 'location': {'id': 38}, 'isAutomatic': True}
+46: (cras.penha) 	 {'employees': [{'id': 62, 'taskIds': [57]}], 'location': {'id': 39}, 'isAutomatic': True}
+47: (cras.perus) 	 {'employees': [{'id': 63, 'taskIds': [57]}], 'location': {'id': 40}, 'isAutomatic': True}
+48: (cras.pinheiros) 	 {'employees': [{'id': 64, 'taskIds': [57]}], 'location': {'id': 41}, 'isAutomatic': True}
+49: (cras.pirituba) 	 {'employees': [{'id': 76, 'taskIds': [57]}], 'location': {'id': 42}, 'isAutomatic': True}
+50: (cras.santana) 	 {'employees': [{'id': 77, 'taskIds': [57]}], 'location': {'id': 43}, 'isAutomatic': True}
+51: (cras.santoamaro) 	 {'employees': [{'id': 78, 'taskIds': [57]}], 'location': {'id': 44}, 'isAutomatic': True}
+52: (cras.sapopemba) 	 {'employees': [{'id': 81, 'taskIds': [57]}], 'location': {'id': 47}, 'isAutomatic': True}
+53: (cras.saomateus) 	 {'employees': [{'id': 79, 'taskIds': [57]}], 'location': {'id': 45}, 'isAutomatic': True}
+54: (cras.saomiguelpaulista) 	 {'employees': [{'id': 80, 'taskIds': [57]}], 'location': {'id': 46}, 'isAutomatic': True}
+55: (cras.se) 	 {'employees': [{'id': 82, 'taskIds': [57]}], 'location': {'id': 98}, 'isAutomatic': True}
