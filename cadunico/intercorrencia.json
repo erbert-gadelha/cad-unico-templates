@@ -46,6 +46,14 @@
                     "events": [],
                     "fields": [
                         {
+                            "description": "datahora",
+                            "label": "Data e Hora",
+                            "mandatory": false,
+                            "visible": false,
+                            "fieldType": "DATETIME"
+                            
+                        },
+                        {
                             "description": "qr_code_local",
                             "label": "Leitura do QR Code Local",
                             "mandatory": true,
@@ -177,6 +185,11 @@
                                     "description": "Exibir campo se a resposta for? 1,2,3,4,5",
                                     "fieldRuleActionType": "DISPLAY_FIELD",
                                     "sourceFieldDescription": "intercorrencia_qntd"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "fieldRuleActionType": "RECEIVE_VALUE",
+                                    "sourceFieldDescription": "{datahora}{geo}"
                                 }
                             ]                       
                         },
@@ -207,6 +220,11 @@
                                     "description": "Exibir campo se a resposta for? 2,3,4,5",
                                     "fieldRuleActionType": "DISPLAY_FIELD",
                                     "sourceFieldDescription": "intercorrencia_qntd"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "fieldRuleActionType": "RECEIVE_VALUE",
+                                    "sourceFieldDescription": "{datahora}{geo}"
                                 }
                             ]                       
                         },
@@ -237,6 +255,11 @@
                                     "description": "Exibir campo se a resposta for? 3,4,5",
                                     "fieldRuleActionType": "DISPLAY_FIELD",
                                     "sourceFieldDescription": "intercorrencia_qntd"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "fieldRuleActionType": "RECEIVE_VALUE",
+                                    "sourceFieldDescription": "{datahora}{geo}"
                                 }
                             ]                       
                         },
@@ -267,6 +290,11 @@
                                     "description": "Exibir campo se a resposta for? 4,5",
                                     "fieldRuleActionType": "DISPLAY_FIELD",
                                     "sourceFieldDescription": "intercorrencia_qntd"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "fieldRuleActionType": "RECEIVE_VALUE",
+                                    "sourceFieldDescription": "{datahora}{geo}"
                                 }
                             ]                       
                         },
@@ -297,6 +325,11 @@
                                     "description": "Exibir campo se a resposta for? 5",
                                     "fieldRuleActionType": "DISPLAY_FIELD",
                                     "sourceFieldDescription": "intercorrencia_qntd"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "fieldRuleActionType": "RECEIVE_VALUE",
+                                    "sourceFieldDescription": "{datahora}{geo}"
                                 }
                             ]                       
                         },
@@ -370,7 +403,14 @@
                             "label": "Assinatura do supervisor",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "SIGNATURE"
+                            "fieldType": "SIGNATURE",
+                            "fieldRules": [
+                                {
+                                    "description": "marca_da_agua",
+                                    "fieldRuleActionType": "RECEIVE_VALUE",
+                                    "sourceFieldDescription": "{datahora}{geo}"
+                                }
+                            ]
                         }
                     ]
                 }
