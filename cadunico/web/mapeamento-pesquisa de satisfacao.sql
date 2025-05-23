@@ -64,83 +64,84 @@
     ----- 01 - NUMERO DA MESA DE CADASTRAMENTO
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '1', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '1', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '2', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '2', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '3', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '3', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '4', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '4', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '5', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '5', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '6', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '6', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '7', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '7', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '8', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '8', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '9', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '9', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '10', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '10', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '11', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '11', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '12', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '12', 7238);
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '13', id_numero_mesa_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, '13', 7238);
     ----- 02 - EXPERIENCIA DO CADASTRAMENTO
-        INSERT INTO cadunico.tb_field_value
-        ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Ótimo', id_experiencia_cadastramento);
 
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Bom', id_experiencia_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Ótimo', 7239);
 
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Regular', id_experiencia_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Bom', 7239);
 
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Ruim', id_experiencia_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Regular', 7239);
 
         INSERT INTO cadunico.tb_field_value
         ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Péssimo', id_experiencia_cadastramento);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Ruim', 7239);
+
+        INSERT INTO cadunico.tb_field_value
+        ("uuid", created_at, updated_at, deleted_at, description, value, field_id)
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Péssimo', 7239);
     ----- 04 - AVALIAÇÃO DO CADASTRADOR
         INSERT INTO cadunico.tb_field_value
         ("uuid" , created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Ótimo', id_avaliacao_cadastrador);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Ótimo', 7241);
 
         INSERT INTO cadunico.tb_field_value
         ("uuid" , created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Bom', id_avaliacao_cadastrador);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Bom', 7241);
 
         INSERT INTO cadunico.tb_field_value
         ("uuid" , created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Regular', id_avaliacao_cadastrador);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Regular', 7241);
 
         INSERT INTO cadunico.tb_field_value
         ("uuid" , created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Ruim', id_avaliacao_cadastrador);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Ruim', 7241);
 
         INSERT INTO cadunico.tb_field_value
         ("uuid" , created_at, updated_at, deleted_at, description, value, field_id)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Péssimo', id_avaliacao_cadastrador);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, NULL, 'Péssimo', 7241);
 
 
 ----- FIELD RULES
@@ -151,15 +152,15 @@
 
         INSERT INTO cadunico.tb_field_and_field_rule
         (field_id, field_rule_id)
-        VALUES(id_descricao_citacao, field_rule_id);
+        VALUES(7239, 6941);
 
 
 ----- SURVEY FIELDS
     INSERT INTO cadunico.tb_survey_field
     (survey_id, field_id, display_order)
-    VALUES  (1, id_numero_mesa_cadastramento, 1),
-            (1, id_experiencia_cadastramento, 2),
-            (1, id_descricao_citacao, 3),
-            (1, id_avaliacao_cadastrador, 4);
+    VALUES  (1, 7238, 1),
+            (1, 7239, 2),
+            (1, 7240, 3),
+            (1, 7241, 4);
 
 

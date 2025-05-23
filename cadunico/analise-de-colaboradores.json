@@ -118,7 +118,7 @@
                         {
                             "description": "colaborador_motivo_avaliacao",
                             "label": "Motivo da avaliação",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
                             "fieldType": "LIST",
                             "fieldValues": [
@@ -135,9 +135,16 @@
                         },{
                             "description": "colaborador_justificativa_avaliacao",
                             "label": "Justifique com a razão da avaliação",
-                            "mandatory": true,
+                            "mandatory": false,
                             "visible": true,
-                            "fieldType": "TEXT"                     
+                            "fieldType": "TEXT",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for?Promoção,Troca de Turno,Desligamento",
+                                    "sourceFieldDescription": "colaborador_motivo_avaliacao",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
                         },
 
 
@@ -194,14 +201,14 @@
                         },
                         {
                             "description": "colaborador_tempo_colaboracao",
-                            "label": "Há quanto tempo o colaborador faz parte da empresa",
+                            "label": "Há quanto tempo o colaborador faz parte da empresa?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT"
                         },
                         {
                             "description": "colaborador_tempo_no_cargo",
-                            "label": "Há quanto tempo o colaborador atua na empresa nesta função que exerce",
+                            "label": "Há quanto tempo o colaborador atua na empresa nesta função que exerce?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT"
