@@ -66,6 +66,8 @@
                                 }
                             ]
                         },
+
+
                         {
                             "description": "quebra_tela_1",
                             "label": "quebra_tela",
@@ -81,6 +83,16 @@
                             "fieldType": "GEOLOCATION"
                         },
                         {
+                            "description": "datahora",
+                            "label": "Data hora",
+                            "mandatory": true,
+                            "visible": false,
+                            "fieldType": "DATETIME"
+                        },
+
+
+
+                        {
                             "description": "opcoes_checklist",
                             "label": "Escolha um checklist",
                             "mandatory": true,
@@ -95,6 +107,8 @@
                                 }
                             ]
                         },
+
+
                         {
                             "description": "quebra_tela_2",
                             "label": "quebra_tela",
@@ -103,19 +117,14 @@
                             "fieldType": "SCREEN_BREAKING"
                         },
                         {
-                            "description": "servicos_rec_utilizando_epi",
+                            "description": "utilizando_epi",
                             "label": "Está usando os EPI's necessários para a execução da atividade?",
                             "mandatory": true,
                             "visible": true,
-                            "fieldType": "BOOLEAN",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Serviços REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
+                            "fieldType": "BOOLEAN"
                         },
+
+
                         {
                             "description": "servicos_rec_caminhao_limpa_fossa",
                             "label": "Foi utilizado o caminhão limpa fossa?",
@@ -155,6 +164,11 @@
                                     "description": "Exibir se a resposta for? Sim",
                                     "sourceFieldDescription": "servicos_rec_limpeza_poco",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
@@ -205,6 +219,11 @@
                                     "description": "Exibir se a resposta for? Outros",
                                     "sourceFieldDescription": "servicos_rec_limpeza_poco_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         }
@@ -238,6 +257,11 @@
                                     "description": "Exibir se a resposta for? Sim",
                                     "sourceFieldDescription": "servicos_rec_limpeza_caixa_areia",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
@@ -288,6 +312,11 @@
                                     "description": "Exibir se a resposta for? Outros",
                                     "sourceFieldDescription": "servicos_rec_limpeza_caixa_areia_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
@@ -297,21 +326,21 @@
 
 
                         {
-                            "description": "servicos_rec_limpeza_grades_sim",
+                            "description": "servicos_rec_limpeza_grades",
                             "label": "Houve limpeza das grades?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_grades_sim_sim_photo",
+                            "description": "servicos_rec_limpeza_grades_sim_photo",
                             "label": "Foto comprovando a limpeza das grades",
                             "mandatory": true,
                             "visible": true,
@@ -319,13 +348,18 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_grades_sim_nao_justificativa",
+                            "description": "servicos_rec_limpeza_grades_nao_justificativa",
                             "label": "Por que não houve limpeza das grades?",
                             "mandatory": true,
                             "visible": true,
@@ -333,7 +367,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -347,7 +381,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_grades_sim_nao_justificativa_outros_texto",
+                            "description": "servicos_rec_limpeza_grades_nao_justificativa_texto",
                             "label": "Justifique porque não houve limpeza das grades",
                             "mandatory": true,
                             "visible": true,
@@ -355,13 +389,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_sim_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_grades_sim_justificativa_outros_foto",
+                            "description": "servicos_rec_limpeza_grades_nao_justificativa_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -369,8 +403,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_sim_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
@@ -381,21 +420,21 @@
 
                         
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao",
                             "label": "Houve limpeza do cesto do poço de sucção?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_sim_photo",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_photo",
                             "label": "Foto comprovando a limpeza do cesto do poço de sucção",
                             "mandatory": true,
                             "visible": true,
@@ -403,13 +442,18 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_nao_justificativa",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
                             "label": "Por que não houve limpeza do cesto do poço de sucção?",
                             "mandatory": true,
                             "visible": true,
@@ -417,7 +461,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -431,7 +475,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_nao_justificativa_outros_texto",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa_texto",
                             "label": "Justifique porque não houve limpeza do cesto do poço de sucção",
                             "mandatory": true,
                             "visible": true,
@@ -439,13 +483,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_sim_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_sim_nao_justificativa_outros_foto",
+                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -453,11 +497,31 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_sim_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                         ,{
@@ -485,6 +549,11 @@
                                     "description": "Exibir se a resposta for? Sim",
                                     "sourceFieldDescription": "servicos_rec_tanque_clarificado",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
@@ -535,6 +604,11 @@
                                     "description": "Exibir se a resposta for? Outros",
                                     "sourceFieldDescription": "servicos_rec_tanque_clarificado_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         }
@@ -570,6 +644,11 @@
                                     "description": "Exibir se a resposta for? Sim",
                                     "sourceFieldDescription": "servicos_rec_tanque_desinfeccao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
@@ -620,6 +699,11 @@
                                     "description": "Exibir se a resposta for? Outros",
                                     "sourceFieldDescription": "servicos_rec_tanque_desinfeccao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         }
@@ -632,8 +716,8 @@
 
                        
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_01",
-                            "label": "Houve retirada de lodo (m³) do Reator 01?",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_01",
+                            "label": "Houve retirada de Iodo (m³) do Reator 01?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
@@ -646,29 +730,29 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_01_sim_NUMBER-2",
-                            "label": "Retirada de lodo (m³) do Reator 01",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_01_sim_NUMBER-2",
+                            "label": "Retirada de Iodo (m³) do Reator 01",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "TEXT",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_01",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_01",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_01_nao",
-                            "label": "Por que não houve Retirada de lodo do Reator 01?",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_01_nao",
+                            "label": "Por que não houve Retirada de Iodo do Reator 01?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_01",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_01",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -682,21 +766,21 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_01_nao_outros_texto",
-                            "label": "Justifique porque não houve retirada de lodo do Reator 01",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_01_nao_outros_texto",
+                            "label": "Justifique porque não houve retirada de Iodo do Reator 01",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_01_nao",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_01_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_01_sim_outros_foto",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_01_sim_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -704,8 +788,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_01_nao",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_01_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         }
@@ -718,8 +807,8 @@
 
 
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_02",
-                            "label": "Houve retirada de lodo (m³) do Reator 02?",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_02",
+                            "label": "Houve retirada de Iodo (m³) do Reator 02?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
@@ -732,29 +821,29 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_02_sim_NUMBER-2",
-                            "label": "Retirada de lodo (m³) do Reator 02",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_02_sim_NUMBER-2",
+                            "label": "Retirada de Iodo (m³) do Reator 02",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "TEXT",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_02",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_02",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_02_nao",
-                            "label": "Por que não houve retirada de lodo do Reator 02?",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_02_nao",
+                            "label": "Por que não houve retirada de Iodo do Reator 02?",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_02",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_02",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -768,21 +857,21 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_02_sim_outros_texto",
-                            "label": "Justifique porque não houve retirada de lodo do Reator 02",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_02_sim_outros_texto",
+                            "label": "Justifique porque não houve retirada de Iodo do Reator 02",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "TEXT",
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_02_nao",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_02_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_retirada_lodo_m3_reator_02_sim_outros_foto",
+                            "description": "servicos_rec_retirada_iodo_m3_reator_02_sim_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -790,11 +879,19 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_retirada_lodo_m3_reator_02_nao",
+                                    "sourceFieldDescription": "servicos_rec_retirada_iodo_m3_reator_02_nao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         }
+
+
+
 
 
 
@@ -809,22 +906,22 @@
 
 
 
+                        {
+                            "description": "servicos_rec_limpeza_bomba_01",
+                            "label": "Houve limpeza da Bomba 01?",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "BOOLEAN",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
                         {
                             "description": "servicos_rec_limpeza_bomba_01_sim",
-                            "label": "Houve limpeza da Bomba 01?",
-                            "mandatory": false,
-                            "visible": true,
-                            "fieldType": "BOOLEAN",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_bomba_01_sim_sim",
                             "label": "Foto comprovando a limpeza da Bomba 01",
                             "mandatory": true,
                             "visible": true,
@@ -832,13 +929,18 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_01_sim_nao_justificativa",
+                            "description": "servicos_rec_limpeza_bomba_01_nao_justificativa",
                             "label": "Por que não houve limpeza da Bomba 01?",
                             "mandatory": true,
                             "visible": true,
@@ -846,7 +948,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -860,7 +962,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_01_sim_nao_justificativa_outros_texto",
+                            "description": "servicos_rec_limpeza_bomba_01_nao_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza da Bomba 01",
                             "mandatory": true,
                             "visible": true,
@@ -868,13 +970,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_sim_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_01_sim_nao_justificativa_outros_foto",
+                            "description": "servicos_rec_limpeza_bomba_01_nao_justificativa_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -882,79 +984,16 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_sim_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
-                        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        ,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        },
 
 
 
@@ -964,21 +1003,21 @@
 
 
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_sim",
+                            "description": "servicos_rec_limpeza_bomba_02",
                             "label": "Houve limpeza da Bomba 02?",
                             "mandatory": false,
                             "visible": true,
                             "fieldType": "BOOLEAN",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
+                                    "description": "Exibir se a resposta for? Serviços REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_sim_sim_foto",
+                            "description": "servicos_rec_limpeza_bomba_02_sim_foto",
                             "label": "Foto comprovando a limpeza da Bomba 02",
                             "mandatory": true,
                             "visible": true,
@@ -986,13 +1025,18 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_sim_nao_justificativa",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_justificativa",
                             "label": "Por que não houve limpeza da Bomba 02?",
                             "mandatory": true,
                             "visible": true,
@@ -1000,7 +1044,7 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_sim",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ],
@@ -1014,7 +1058,7 @@
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_sim_nao_justificativa_outros_texto",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_justificativa_outros_texto",
                             "label": "Justifique porque não houve limpeza da Bomba 02",
                             "mandatory": true,
                             "visible": true,
@@ -1022,13 +1066,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_sim_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
                                 }
                             ]
                         },
                         {
-                            "description": "servicos_rec_limpeza_bomba_02_sim_nao_justificativa_outros_foto",
+                            "description": "servicos_rec_limpeza_bomba_02_nao_justificativa_outros_foto",
                             "label": "Comprove sua justificativa com uma foto",
                             "mandatory": true,
                             "visible": true,
@@ -1036,93 +1080,13 @@
                             "fieldRules": [
                                 {
                                     "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_sim_nao_justificativa",
+                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_justificativa",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-
-
-
-
-
-
-
-                        {
-                            "description": "servicos_rec_limpeza_grades_nao",
-                            "label": "Houve limpeza das grades?",
-                            "mandatory": false,
-                            "visible": true,
-                            "fieldType": "BOOLEAN",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_grades_nao_sim_photo",
-                            "label": "Foto comprovando a limpeza das grades",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "PHOTO",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_grades_nao_nao_justificativa",
-                            "label": "Por que não houve limpeza das grades?",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "LIST",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ],
-                            "fieldValues": [
-                                {
-                                    "value": "Fora de cronograma"
                                 },
                                 {
-                                    "value": "Outros"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_grades_nao_nao_justificativa_outros_texto",
-                            "label": "Justifique porque não houve limpeza da caixa de areia",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "TEXT",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_nao_nao_justificativa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_grades_nao_nao_justificativa_outros_foto",
-                            "label": "Comprove sua justificativa com uma foto",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "PHOTO",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_grades_nao_nao_justificativa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
@@ -1131,405 +1095,7 @@
 
 
 
-                        
-                        {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao",
-                            "label": "Houve limpeza do cesto do poço de sucção?",
-                            "mandatory": false,
-                            "visible": true,
-                            "fieldType": "BOOLEAN",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_sim_photo",
-                            "label": "Foto comprovando a limpeza do cesto do poço de sucção",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "PHOTO",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa",
-                            "label": "Por que não houve limpeza do cesto do poço de sucção?",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "LIST",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ],
-                            "fieldValues": [
-                                {
-                                    "value": "Fora de cronograma"
-                                },
-                                {
-                                    "value": "Outros"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa_outros_texto",
-                            "label": "Justifique porque não houve limpeza do cesto poço de sucção",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "TEXT",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa_outros_foto",
-                            "label": "Comprove sua justificativa com uma foto",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "PHOTO",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_cesta_poco_succao_nao_nao_justificativa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        }
 
-
-
-
-                       
-                        
-                        
-                        ,
-
-
-
-
-
-
-                        {
-                            "description": "servicos_rec_limpeza_bomba_01_nao",
-                            "label": "Houve limpeza da Bomba 01?",
-                            "mandatory": false,
-                            "visible": true,
-                            "fieldType": "BOOLEAN",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_bomba_01_nao_sim",
-                            "label": "Foto comprovando a limpeza da Bomba 01",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "PHOTO",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_bomba_01_nao_nao",
-                            "label": "Por que não houve limpeza da Bomba 01?",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "LIST",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ],
-                            "fieldValues": [
-                                {
-                                    "value": "Fora de cronograma"
-                                },
-                                {
-                                    "value": "Outros"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_bomba_01_nao_nao_outros_texto",
-                            "label": "Justifique porque não houve limpeza da Bomba 01",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "TEXT",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_bomba_01_nao_nao_outros_foto",
-                            "label": "Comprove sua justificativa com uma foto",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "PHOTO",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_01_nao_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        ,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        {
-                            "description": "servicos_rec_limpeza_bomba_02_nao",
-                            "label": "Houve limpeza da Bomba 02?",
-                            "mandatory": false,
-                            "visible": true,
-                            "fieldType": "BOOLEAN",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_caminhao_limpa_fossa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_sim_foto",
-                            "label": "Foto comprovando a limpeza da Bomba 02",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "PHOTO",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Sim",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_justificativa",
-                            "label": "Por que não houve limpeza da Bomba 02?",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "LIST",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Não",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ],
-                            "fieldValues": [
-                                {
-                                    "value": "Fora de cronograma"
-                                },
-                                {
-                                    "value": "Outros"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_justificativa_outros_texto",
-                            "label": "Justifique porque não houve limpeza da Bomba 02",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "TEXT",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_nao_justificativa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-                        {
-                            "description": "servicos_rec_limpeza_bomba_02_nao_nao_jutificativa_outros_foto",
-                            "label": "Comprove sua justificativa com uma foto",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "PHOTO",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Outros",
-                                    "sourceFieldDescription": "servicos_rec_limpeza_bomba_02_nao_nao_justificativa",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-
-
-
-
-                        {
-                            "description": "servicos_rec_assinatura",
-                            "label": "Assinatura do colaborador",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "SIGNATURE",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Serviços REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-
-
-                        {
-                            "description": "servicos_rec_re",
-                            "label": "R.E do colaborador",
-                            "mandatory": false,
-                            "visible": true,
-                            "fieldType": "TEXT",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Serviços REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
-
-
-                        {
-                            "description": "servicos_rec_status",
-                            "label": "Status da tarefa",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "LIST",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Serviços REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ],
-                            "fieldValues": [
-                                {
-                                    "value": "Em andamento"
-                                },
-                                {
-                                    "value": "Finalizado"
-                                }
-                            ]
-                        },
-
-
-                        {
-                            "description": "inspecoes_rec_utilizando_epi",
-                            "label": "Está usando os EPI's necessários para a execução da atividade?",
-                            "mandatory": true,
-                            "visible": true,
-                            "fieldType": "BOOLEAN",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Inspeções REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
-                        },
 
 
                         {
@@ -2067,6 +1633,11 @@
                                     "description": "Exibir se a resposta for? Sim",
                                     "sourceFieldDescription": "inspecoes_rec_condicao_efluente_normal",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
@@ -2082,6 +1653,11 @@
                                     "description": "Exibir se a resposta for? Não",
                                     "sourceFieldDescription": "inspecoes_rec_condicao_efluente_normal",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
@@ -2110,7 +1686,6 @@
                                 }
                             ]
                         },
-
                         {
                             "description": "inspecoes_rec_condicao_efluente_coloracao_cinza",
                             "label": "Comprove que o efluente está com a cor cinza",
@@ -2122,10 +1697,14 @@
                                     "description": "Exibir se a resposta for? Cinza",
                                     "sourceFieldDescription": "inspecoes_rec_condicao_efluente_coloracao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
-
                         {
                             "description": "inspecoes_rec_condicao_efluente_coloracao_outro",
                             "label": "Capture uma foto mostrando qual a coloração do efluente",
@@ -2134,16 +1713,23 @@
                             "fieldType": "PHOTO",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? Não",
+                                    "description": "Exibir se a resposta for? ???",
                                     "sourceFieldDescription": "inspecoes_rec_condicao_efluente_coloracao",
                                     "fieldRuleActionType": "DISPLAY_FIELD"
+                                },
+                                {
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
 
 
+
+
                         {
-                            "description": "inspecoes_rec_observacoes",
+                            "description": "inspecao_rec_observacao",
                             "label": "Observações",
                             "mandatory": false,
                             "visible": true,
@@ -2157,49 +1743,50 @@
                             ]
                         },
 
+
                         {
-                            "description": "inspecoes_rec_assinatura",
+                            "description": "gravar_audio",
+                            "label": "Gravar audio",
+                            "mandatory": false,
+                            "visible": true,
+                            "fieldType": "AUDIO",
+                            "fieldRules": [
+                                {
+                                    "description": "Exibir se a resposta for? Inspeções REC",
+                                    "sourceFieldDescription": "opcoes_checklist",
+                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                }
+                            ]
+                        },
+
+
+                        {
+                            "description": "assinatura",
                             "label": "Assinatura do responsável",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "SIGNATURE",
                             "fieldRules": [
                                 {
-                                    "description": "Exibir se a resposta for? Inspeções REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
+                                    "description": "marca_da_agua",
+                                    "sourceFieldDescription": "{datahora}{geo}",
+                                    "fieldRuleActionType": "RECEIVE_VALUE"
                                 }
                             ]
                         },
-
                         {
-                            "description": "inspecoes_rec_re",
+                            "description": "re_do_responsavel",
                             "label": "R.E do responsável",
                             "mandatory": false,
                             "visible": true,
-                            "fieldType": "TEXT",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Inspeções REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ]
+                            "fieldType": "TEXT"
                         },
-
                         {
-                            "description": "inspecoes_rec_status",
+                            "description": "status_rec",
                             "label": "Status",
                             "mandatory": true,
                             "visible": true,
                             "fieldType": "LIST",
-                            "fieldRules": [
-                                {
-                                    "description": "Exibir se a resposta for? Inspeções REC",
-                                    "sourceFieldDescription": "opcoes_checklist",
-                                    "fieldRuleActionType": "DISPLAY_FIELD"
-                                }
-                            ],
                             "fieldValues": [
                                 {
                                     "value": "Em andamento"
