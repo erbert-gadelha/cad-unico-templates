@@ -1,5 +1,46 @@
 -- APENAS OS CAMPOS NOVOS ABAIXO OS CAMPOS QUE --
--- DEVE SER ALTERADOS É MAIS PRÁTICO PELO DBEAVER --
+-- DEVEM SER ALTERADOS É MAIS PRÁTICO PELO DBEAVER --
+
+-- OLD -- ATUALIZAR TEXTOS OU ADICIONAR FIELDS JUNTO A OUTROS QUE JÁ EXISTIAM
+        -- ONDE HOUVER "Justificativa de atraso (%d)"
+        -- SUBSTITUIR O TEXTO PARA "Motivo do atraso (%d)"
+
+            -- INSERIR CAMPO NOVO ACIMA DO "Motivo do atraso (%d)" -- CAMPO SE REPETE 13 VEZES
+                INSERT INTO cadunico.tb_field 
+                ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
+                VALUES (gen_random_uuid(), now(), null, null, 'nome_do_colaborador_atrasado_D', 'Nome do colaborador (D)', true, 'TEXT', true);
+                    
+                INSERT INTO cadunico.tb_field_rule
+                ("uuid", created_at, updated_at, deleted_at, description, source_field_description, field_rule_action_type, value_to_fill, enable_group_tasks, go_to_next_status)
+                VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? 1,2,3,4,5,6,7,8,9,10,11,12,13', 'quantidade_cadastradores_atrasados', 'DISPLAY_FIELD', NULL, NULL, NULL);
+
+                INSERT INTO cadunico.tb_field_and_field_rule
+                (field_id, field_rule_id)
+                VALUES(ID_nome_do_colaborador_atrasado_D, ID_DO_FIELD_RULE_NOVO);
+
+        -- ONDE HOUVER "Justificativa de falta (%d)"
+        -- SUBSTITUIR O TEXTO PARA "Motivo da falta (%d)"
+
+            -- INSERIR CAMPO NOVO ACIMA DO "Motivo da falta (%d)" -- CAMPO SE REPETE 13 VEZES
+                INSERT INTO cadunico.tb_field 
+                ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
+                VALUES (gen_random_uuid(), now(), null, null, 'houve_reposicao_falta_D', 'Houve Reposição da Falta?', true, 'BOOLEAN', true);
+                    
+                INSERT INTO cadunico.tb_field_rule
+                ("uuid", created_at, updated_at, deleted_at, description, source_field_description, field_rule_action_type, value_to_fill, enable_group_tasks, go_to_next_status)
+                VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? 1,2,3,4,5,6,7,8,9,10,11,12,13', 'quantidade_faltas', 'DISPLAY_FIELD', NULL, NULL, NULL);
+
+                -- "Houve Reposição da Falta?" "Não" --
+                    INSERT INTO cadunico.tb_field 
+                    ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
+                    VALUES (gen_random_uuid(), now(), null, null, 'justificativa_reposicao_falta_D', 'Por que não houve reposição? (D)', true, 'TEXT', true);
+
+                    INSERT INTO cadunico.tb_field_rule
+                    ("uuid", created_at, updated_at, deleted_at, description, source_field_description, field_rule_action_type, value_to_fill, enable_group_tasks, go_to_next_status)
+                    VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? Não', 'houve_reposicao_falta_D', 'DISPLAY_FIELD', NULL, NULL, NULL);
+
+
+
 
 
 
@@ -21,7 +62,7 @@ VALUES (gen_random_uuid(), now(), null, null, 'entrevistadores_estao_uniformizad
 
             INSERT INTO cadunico.tb_field_and_field_rule
             (field_id, field_rule_id)
-            VALUES(ID_justificativa, ID_DO_FIELD_RULE_NOVO);
+            VALUES(ID_colaboradores_sem_uniforme, ID_DO_FIELD_RULE_NOVO);
 
         -- ANSWERS --
             INSERT INTO cadunico.tb_field_value
@@ -150,7 +191,7 @@ VALUES (gen_random_uuid(), now(), null, null, 'entrevistadores_possuem_senhas_de
 
             INSERT INTO cadunico.tb_field_and_field_rule
             (field_id, field_rule_id)
-            VALUES(ID_sistemas_que_entrevistadores_tem_acesso, ID_DO_FIELD_RULE_NOVO);
+            VALUES(ID_quantos_colaboradores_estao_sem_acesso ID_DO_FIELD_RULE_NOVO);
 
         -- ANSWERS --
             INSERT INTO cadunico.tb_field_value
@@ -248,7 +289,7 @@ VALUES (gen_random_uuid(), now(), null, null, 'entrevistadores_possuem_senhas_de
 -- TODOS OS ENTREVISTADORES ESTÃO CUMPRINDO COM OS PROTOCOLOS DE ATENDIMENTO --
 INSERT INTO cadunico.tb_field
 ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
-VALUES (gen_random_uuid(), now(), null, null, 'entrevistadores_estao_cumprindo_protocolos_de_atendimento?', 'Todos os entrevistadores estão cumprindo com os protocolos de atendimento?', true, 'BOOLEAN', true);
+VALUES (gen_random_uuid(), now(), null, null, 'entrevistadores_estao_cumprindo_protocolos_de_atendimento', 'Todos os entrevistadores estão cumprindo com os protocolos de atendimento?', true, 'BOOLEAN', true);
 
     -- QUANTOS ENTREVISTADORES  CUMPREM PROTOCOLOS --
         INSERT INTO cadunico.tb_field
@@ -262,7 +303,7 @@ VALUES (gen_random_uuid(), now(), null, null, 'entrevistadores_estao_cumprindo_p
 
             INSERT INTO cadunico.tb_field_and_field_rule
             (field_id, field_rule_id)
-            VALUES(ID_sistemas_que_entrevistadores_tem_acesso, ID_DO_FIELD_RULE_NOVO);
+            VALUES(ID_quantos_nao_estao_cumprindo_protocolos, ID_DO_FIELD_RULE_NOVO);
         
 
         -- ANSWERS --
@@ -311,15 +352,15 @@ VALUES (gen_random_uuid(), now(), null, null, 'entrevistadores_estao_cumprindo_p
         -- COLABORADORES (1-13) -- DEVE REPETIR ESSE TRECHO 13 VEZES ALTERANDO OS VALORES DE N OS IDs
                 INSERT INTO cadunico.tb_field
                 ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
-                VALUES (gen_random_uuid(), now(), null, null, 'nome_colaborador_descumprindo_protocolos', 'Nome do colaborador que está descumprindo os protocolos (n)', true, 'TEXT', true);
+                VALUES (gen_random_uuid(), now(), null, null, 'nome_colaborador_descumprindo_protocolos_N', 'Nome do colaborador que está descumprindo os protocolos (n)', true, 'TEXT', true);
 
                 INSERT INTO cadunico.tb_field
                 ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
-                VALUES (gen_random_uuid(), now(), null, null, 'qual_protocolo_foi_descumprido', 'Qual protocolo foi descumprido pelo entrevistador (n)', true, 'TEXT', true);
+                VALUES (gen_random_uuid(), now(), null, null, 'qual_protocolo_foi_descumprido_N', 'Qual protocolo foi descumprido pelo entrevistador (n)', true, 'TEXT', true);
 
                 INSERT INTO cadunico.tb_field
                 ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
-                VALUES (gen_random_uuid(), now(), null, null, 'motivo_nao_cumprimento_protocolo', ' Motivo pelo não cumprimento do protocolo (n)', true, 'TEXT', true);
+                VALUES (gen_random_uuid(), now(), null, null, 'motivo_nao_cumprimento_protocolo_N', ' Motivo pelo não cumprimento do protocolo (n)', true, 'TEXT', true);
 
 
             -- FIELD RULES --
@@ -329,15 +370,15 @@ VALUES (gen_random_uuid(), now(), null, null, 'entrevistadores_estao_cumprindo_p
 
                 INSERT INTO cadunico.tb_field_and_field_rule
                     (field_id, field_rule_id)
-                    VALUES(ID_nome_colaborador_descumprindo_protocolos, ID_DO_FIELD_RULE_NOVO);
+                    VALUES(ID_nome_colaborador_descumprindo_protocolos_N, ID_DO_FIELD_RULE_NOVO);
                     
                 INSERT INTO cadunico.tb_field_and_field_rule
                     (field_id, field_rule_id)
-                    VALUES(ID_qual_protocolo_foi_descumprido, ID_DO_FIELD_RULE_NOVO);        
+                    VALUES(ID_qual_protocolo_foi_descumprido_N, ID_DO_FIELD_RULE_NOVO);        
 
                 INSERT INTO cadunico.tb_field_and_field_rule
                     (field_id, field_rule_id)
-                    VALUES(ID_motivo_nao_cumprimento_protocolo, ID_DO_FIELD_RULE_NOVO);
+                    VALUES(ID_motivo_nao_cumprimento_protocolo_N, ID_DO_FIELD_RULE_NOVO);
         
 
 
@@ -442,7 +483,7 @@ VALUES (gen_random_uuid(), now(), null, null, 'caixa_de_arquivamento_conforme_or
     -- FIELD RULES --
         INSERT INTO cadunico.tb_field_rule
         ("uuid", created_at, updated_at, deleted_at, description, source_field_description, field_rule_action_type, value_to_fill, enable_group_tasks, go_to_next_status)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? Não', 'caixa_arquivamento_justificativa', 'DISPLAY_FIELD', NULL, NULL, NULL);
+        VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? Não', 'caixa_de_arquivamento_conforme_orientacoes_CGB', 'DISPLAY_FIELD', NULL, NULL, NULL);
 
         INSERT INTO cadunico.tb_field_and_field_rule
             (field_id, field_rule_id)
@@ -474,18 +515,34 @@ INSERT INTO cadunico.tb_field
 ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
 VALUES (gen_random_uuid(), now(), null, null, 'existem_formularios_pendentes', 'Existe na unidade formulários do Cadastro Único em estoque com pendências a tratar, fora das caixas, rasgados ou guardados em grande quantidade?', true, 'BOOLEAN', true);
 
-    INSERT INTO cadunico.tb_field
-    ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
-    VALUES (gen_random_uuid(), now(), null, null, 'existem_formularios_pendentes_justificativa', 'Justificativa', true, 'TEXT', true);
 
-    -- FIELD RULES --
-        INSERT INTO cadunico.tb_field_rule
-        ("uuid", created_at, updated_at, deleted_at, description, source_field_description, field_rule_action_type, value_to_fill, enable_group_tasks, go_to_next_status)
-        VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? Sim', 'existem_formularios_pendentes', 'DISPLAY_FIELD', NULL, NULL, NULL);
+    -- JUSTIFIQUE POR QUE SIM
+        INSERT INTO cadunico.tb_field
+        ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
+        VALUES (gen_random_uuid(), now(), null, null, 'existem_formularios_pendentes_sim_justificativa', 'Justifique por que sim', true, 'TEXT', true);
 
-        INSERT INTO cadunico.tb_field_and_field_rule
-            (field_id, field_rule_id)
-            VALUES(ID_existem_formularios_pendentes_justificativa, ID_DO_FIELD_RULE_NOVO);
+        -- FIELD RULES --
+            INSERT INTO cadunico.tb_field_rule
+            ("uuid", created_at, updated_at, deleted_at, description, source_field_description, field_rule_action_type, value_to_fill, enable_group_tasks, go_to_next_status)
+            VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? Sim', 'existem_formularios_pendentes', 'DISPLAY_FIELD', NULL, NULL, NULL);
+
+            INSERT INTO cadunico.tb_field_and_field_rule
+                (field_id, field_rule_id)
+                VALUES(ID_existem_formularios_pendentes_sim_justificativa, ID_DO_FIELD_RULE_NOVO);
+    
+    -- JUSTIFIQUE POR QUE NÃO
+        INSERT INTO cadunico.tb_field
+        ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
+        VALUES (gen_random_uuid(), now(), null, null, 'existem_formularios_pendentes_nao_justificativa', 'Justifique por que não', true, 'TEXT', true);
+
+        -- FIELD RULES --
+            INSERT INTO cadunico.tb_field_rule
+            ("uuid", created_at, updated_at, deleted_at, description, source_field_description, field_rule_action_type, value_to_fill, enable_group_tasks, go_to_next_status)
+            VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? Não', 'existem_formularios_pendentes', 'DISPLAY_FIELD', NULL, NULL, NULL);
+
+            INSERT INTO cadunico.tb_field_and_field_rule
+                (field_id, field_rule_id)
+                VALUES(ID_existem_formularios_pendentes_nao_justificativa, ID_DO_FIELD_RULE_NOVO);
 
 
 
@@ -504,18 +561,43 @@ VALUES (gen_random_uuid(), now(), null, null, 'unidade_realiza_encaixes_conforme
         VALUES(gen_random_uuid(), now(), NULL, NULL, 'Exibir campo se a resposta for? Sim', 'unidade_realiza_encaixes_conforme_roteiro_de_atendimento', 'DISPLAY_FIELD', NULL, NULL, NULL);
 
         INSERT INTO cadunico.tb_field_and_field_rule
-            (field_id, field_rule_id)
-            VALUES(ID_unidade_realiza_encaixes_conforme_roteiro_de_atendimento_justificativa, ID_DO_FIELD_RULE_NOVO);
+        (field_id, field_rule_id)
+        VALUES(ID_unidade_realiza_encaixes_conforme_roteiro_de_atendimento_justificativa, ID_DO_FIELD_RULE_NOVO);
+
+
+
+
+-- REGISTRO FOTOGRÁFICO --
+INSERT INTO cadunico.tb_field
+("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
+VALUES (gen_random_uuid(), now(), null, null, 'registro_fotografico_rondadiaria', 'Registro fotográfico', true, 'PHOTO', true);
+
+    -- FIELD RULE MARCA_DA_AGUA
+    INSERT INTO cadunico.tb_field_and_field_rule
+    (field_id, field_rule_id)
+    VALUES(ID_registro_fotografico_rondadiaria, 6940);  -- ID DA RULE MARCA_DA_AGUA MAIS RECENTE
 
 
 
 
 
 
+-- OLD --
+            -- HOUVE INTERAÇÃO COM O GESTOR LOCAL DA UNIDADE? --
+            -- ADICIONAR DOIS CAMPOS A MAIS QUE DEVEM SER EXIBIDOS ANTES DO CAMPO DE JUSTIFICATIVA
+                INSERT INTO cadunico.tb_field 
+                ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
+                VALUES (gen_random_uuid(), now(), null, null, 'nome_do_gestor', 'Nome do Gestor', true, 'TEXT', true);
+
+                INSERT INTO cadunico.tb_field 
+                ("uuid", created_at, updated_at, deleted_at, description, "label", mandatory, fieldtype, visible)
+                VALUES (gen_random_uuid(), now(), null, null, 'cargo_do_gestor', 'Cargo do Gestor', true, 'TEXT', true);
 
 
 
 
+            -- ADICIONAR MARCA_DE_AGUA AOS FIELDS 'foto_ocorrencia_%d'
 
 
 
+            -- OBSERVAÇÕES DEVE SER UM CAMPO DE TEXTO LIVRE AO INVÉS DE 3 CAMPOS DO TIPO PHOTO
